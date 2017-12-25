@@ -42,7 +42,7 @@ class BaseController extends Controller
 	public function success($data)
 	{
 		if(!is_array($data)) $data = array();
-		$result = array_merge(array('errorCode'=>'0','errorMessage'=>''),$data);
+		$result = array_merge(array('status'=>'200','message'=>''),$data);
 		array_walk_recursive($result,function(&$val,$key){
 		    if(!is_array($val)){
 		    	if(is_numeric($val)) $val = strval($val);
@@ -54,7 +54,7 @@ class BaseController extends Controller
 	
 	public function fail($errorCode,$errorMsg)
 	{
-		$data = array('result'=>'','errorCode'=>$errorCode,'errorMessage'=>$errorMsg);
+		$data = array('status'=>$errorCode,'message'=>$errorMsg);
 		//$this->profile();
 		return Response::json($data);
 	}

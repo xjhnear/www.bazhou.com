@@ -88,12 +88,12 @@ Route::filter('uri_verify',function(){
     }
 	
     $secret = md5($query);
-    if($secret != $source){
-    	$error = serialize($input) . "\r\n";
-    	$error .= $source . "\r\n";
-    	//Log::error($error);
-    	return Response::json(array('result'=>'','errorCode'=>'11211','errorMessage'=>'接口验证错误'));
-    }
+//    if($secret != $source){
+//    	$error = serialize($input) . "\r\n";
+//    	$error .= $source . "\r\n";
+//    	//Log::error($error);
+//    	return Response::json(array('result'=>'','errorCode'=>'11211','errorMessage'=>'接口验证错误'));
+//    }
 });
 
 /*

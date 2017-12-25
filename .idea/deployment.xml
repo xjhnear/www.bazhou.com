@@ -2,7 +2,14 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
-      <paths name="www.bazhou.com">
+      <paths name="bi-front-mobile">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="new_visual_cat">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

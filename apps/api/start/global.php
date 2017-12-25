@@ -82,7 +82,7 @@ Log::useDailyFiles(storage_path().'/logs/'.$logFile);
 App::error(function(Exception $exception, $code)
 {
 	Log::error($exception);
-	return Response::json(array('result'=>array(),'errorCode'=>11211,'errorMessage'=>'Server Error!!'));
+	return Response::json(array('status'=>203,'message'=>'Server Error!!'));
 });
 
 /*

@@ -18,6 +18,11 @@ use Illuminate\Support\Facades\Response;
 
 Route::pattern('symbol', '[\/]?');
 
+/*-------------------------------系统-----------------------------*/
+//配置√
+Route::any('app/upgrade{symbol}',array('before'=>'uri_verify','uses'=>'AppController@upGrade'));
+
+
 //登录√
 Route::get('account/login{symbol}',array('before'=>'uri_verify','uses'=>'AccountController@getLogin'));
 //注册√
@@ -343,18 +348,6 @@ Route::get('activity/ask-detail{symbol}',array('before'=>'uri_verify','uses'=>'A
  * @param json answer[{'numid':1,'choice':'A'}]
  */
 Route::get('activity/commit{symbol}',array('before'=>'uri_verify','uses'=>'ActivityController@doCommit'));
-/*-------------------------------系统-----------------------------*/
-//配置√
-Route::get('app/config{symbol}',array('before'=>'uri_verify','uses'=>'AppController@getConfig'));
-
-Route::get('app/simple-config{symbol}',array('before'=>'uri_verify','uses'=>'AppController@simpleConfig'));
-
-/**
- * 版本√
- * @param string appname 应用名称
- * @param string version 版本
- */
-Route::get('app/check-version{symbol}',array('before'=>'uri_verify','uses'=>'AppController@checkVersion'));
 
 /*-------------------------------举报-----------------------------*/
 

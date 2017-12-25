@@ -49,7 +49,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => '127.0.0.1',
-			'database'  => 'mcp_www',
+			'database'  => 'bazhou_www',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',
@@ -59,7 +59,7 @@ return array(
 		'system' => array(
 			'driver'    => 'mysql',
 			'host'      => '127.0.0.1',
-			'database'  => 'mcp_www',
+			'database'  => 'bazhou_www',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',
@@ -69,7 +69,7 @@ return array(
 		'www' => array(
 		    'driver'    => 'mysql',
 			'host'      => '127.0.0.1',
-			'database'  => 'mcp_www',
+			'database'  => 'bazhou_www',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',
