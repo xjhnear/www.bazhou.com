@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b5859ff1-1d6d-4488-afaa-e4601347459e" name="默认的" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/AdvController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/ChatController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/DocController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/ForumController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/GiftbagController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/HuntController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/InformController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/LikeController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/MessageController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/RelationController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/ShopController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/TaskController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/v3/ActivityController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/v3/ArticleController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/v3/AskController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/v3/BetaController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/v3/CircleController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/v3/CommentController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/v3/GameController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/v3/GiftController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/v3/HomeController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/v3/PlazaController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/v3/RankController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/v3/ShareController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/v3/VideoController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/v3/WcaController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/apps/api/controllers/v3/XgameController.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/api/controllers/UserController.php" afterPath="$PROJECT_DIR$/apps/api/controllers/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/api/routes.php" afterPath="$PROJECT_DIR$/apps/api/routes.php" />
-    </list>
+    <list default="true" id="b5859ff1-1d6d-4488-afaa-e4601347459e" name="默认的" comment="" />
     <ignored path="mcp.me.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -107,8 +77,8 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/services/Youxiduo/User/Model/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51033056">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0392562">
+              <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
               <folding>
                 <element signature="e#6#199#0#PHP" expanded="true" />
                 <element signature="e#233#257#0#PHP" expanded="true" />
@@ -875,10 +845,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://E:/mcp.youxiduo.com/mcp.youxiduo.com/services/Youxiduo/User/AccountService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82438016">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#223#256#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/services/Youxiduo/User/Model/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51033056">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0392562">
+          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
           <folding>
             <element signature="e#6#199#0#PHP" expanded="true" />
             <element signature="e#233#257#0#PHP" expanded="true" />
