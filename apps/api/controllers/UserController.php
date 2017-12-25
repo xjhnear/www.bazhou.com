@@ -1,9 +1,7 @@
 <?php
-use Yxd\Services\Cms\CommentService;
 use Yxd\Services\ThreadService;
 use Illuminate\Support\Facades\Response;
 use Yxd\Services\AtmeService;
-use Yxd\Services\Cms\GameService;
 use Yxd\Modules\Activity\GiftbagService;
 use Yxd\Services\UserFeedService;
 use Yxd\Services\RelationService;
