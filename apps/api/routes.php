@@ -19,25 +19,29 @@ use Illuminate\Support\Facades\Response;
 Route::pattern('symbol', '[\/]?');
 
 /*-------------------------------系统-----------------------------*/
-//配置√
+//检查更新√
 Route::any('app/upgrade{symbol}',array('before'=>'uri_verify','uses'=>'AppController@upGrade'));
 
 /*-------------------------------用户-------------------------------*/
-//获取用户信息√
-Route::get('user/info{symbol}',array('before'=>'uri_verify','uses'=>'UserController@getInfo'));
-//头像
-Route::get('user/avatar/{uid}{symbol}',array('uses'=>'UserController@getAvatar'));
-//用户游币
-Route::get('user/money{symbol}',array('before'=>'uri_verify','uses'=>'UserController@getMoney'));
-//完善资料√
-Route::post('user/edit{symbol}',array('before'=>'uri_verify','uses'=>'UserController@postEdit'));
-//我的动态
-Route::get('user/feeds{symbol}',array('before'=>'uri_verify','uses'=>'UserController@feeds'));
-//@我
-Route::get('user/atme{symbol}',array('before'=>'uri_verify','uses'=>'UserController@atme'));
+//登录√
+Route::any('user/login{symbol}',array('before'=>'uri_verify','uses'=>'UserController@login'));
+//注册、忘记密码、更换绑定手机
+Route::any('user/register{symbol}',array('uses'=>'UserController@register'));
+//意见反馈
+Route::any('user/feedback{symbol}',array('before'=>'uri_verify','uses'=>'UserController@feedback'));
+//获取用户信息
+Route::any('user/info{symbol}',array('before'=>'uri_verify','uses'=>'UserController@info'));
+//用户资料编辑
+Route::any('user/edit{symbol}',array('before'=>'uri_verify','uses'=>'UserController@edit'));
+//首页获取用户状态
+Route::any('user/identification{symbol}',array('before'=>'uri_verify','uses'=>'UserController@identification'));
+//认证--上传视频
+Route::any('user/identify',array('uses'=>'UserController@identify'));
+//更新认证结果
+Route::any('user/identifyrefresh',array('uses'=>'UserController@identifyRefresh'));
 
-Route::get('user/query',array('uses'=>'UserController@query'));
-
+//获取验证码
+Route::any('sms/verify{symbol}',array('before'=>'uri_verify','uses'=>'UserController@smsVerify'));
 
 /*
 App::missing(function($exception){

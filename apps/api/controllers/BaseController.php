@@ -39,7 +39,7 @@ class BaseController extends Controller
 		}
 	}	
 	
-	public function success($data)
+	public function success($data=array())
 	{
 		if(!is_array($data)) $data = array();
 		$result = array_merge(array('status'=>'200','message'=>''),$data);

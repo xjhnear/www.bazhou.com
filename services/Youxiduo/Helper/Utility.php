@@ -56,7 +56,7 @@ class Utility
 	public static function validateMobile($mobile)
 	{
 		if(!$mobile) return false;
-		if(preg_match("/^13[0-9]{1}[0-9]{8}$|14[0-9]{1}[0-9]{8}$|15[0-9]{1}[0-9]{8}$|18[0-9]{1}[0-9]{8}$|17[0-9]{1}[0-9]{8}$|19[0]{1}[0-9]{8}$/",$mobile)){
+		if(preg_match("/^13[0-9]{1}[0-9]{8}$|14[0-9]{1}[0-9]{8}$|15[0-9]{1}[0-9]{8}$|16[0-9]{1}[0-9]{8}$|18[0-9]{1}[0-9]{8}$|17[0-9]{1}[0-9]{8}$|19[0-9]{1}[0-9]{8}$/",$mobile)){
 			return true;
 		}
 		return false;
@@ -104,8 +104,7 @@ class Utility
 	public static function cryptPwd($password)
 	{
 	    if(strlen($password) == 32) return $password;
-		$salt = md5(substr($password,-1));
-		$password = md5($password . $salt);
+		$password = md5($password);
 		return $password;
 	}
 	

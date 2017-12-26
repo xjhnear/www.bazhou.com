@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-12-25 17:08:44
+Date: 2017-12-26 18:29:55
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -81,6 +81,25 @@ INSERT INTO `core_module` VALUES ('2', 'core', '高级管理', 'admin', '包括�
 INSERT INTO `core_module` VALUES ('4', 'all', '手机号码管理', 'phone', '包括手机号码管理、导入、导出管理等', '0', '9');
 
 -- ----------------------------
+-- Table structure for m_feedback
+-- ----------------------------
+DROP TABLE IF EXISTS `m_feedback`;
+CREATE TABLE `m_feedback` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `urid` int(11) NOT NULL COMMENT '用户ID',
+  `contact` varchar(200) NOT NULL COMMENT '联系方式',
+  `content` text NOT NULL COMMENT '反馈内容',
+  `created_at` int(11) unsigned NOT NULL COMMENT '创建时间',
+  `updated_at` int(11) unsigned NOT NULL COMMENT '修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+-- ----------------------------
+-- Records of m_feedback
+-- ----------------------------
+INSERT INTO `m_feedback` VALUES ('1', '17', '1111', '222', '1514281237', '1514281237');
+
+-- ----------------------------
 -- Table structure for m_phone_batch
 -- ----------------------------
 DROP TABLE IF EXISTS `m_phone_batch`;
@@ -128,21 +147,49 @@ CREATE TABLE `m_phone_numbers` (
 -- ----------------------------
 DROP TABLE IF EXISTS `m_user`;
 CREATE TABLE `m_user` (
-  `uid` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户ID',
-  `username` varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '用户名',
-  `phone_number` varchar(20) NOT NULL DEFAULT '' COMMENT '手机号码',
+  `urid` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户ID',
+  `mobile` varchar(20) NOT NULL DEFAULT '' COMMENT '手机号码',
   `password` varchar(40) CHARACTER SET utf8 NOT NULL COMMENT '密码',
   `name` varchar(50) NOT NULL DEFAULT '' COMMENT '姓名',
+  `avatar` varchar(255) DEFAULT NULL COMMENT '头像',
   `sex` int(11) NOT NULL DEFAULT '1' COMMENT '性别 1-male 2-female',
-  `address` varchar(200) NOT NULL DEFAULT '' COMMENT '地址',
-  `id_number` varchar(50) NOT NULL DEFAULT '' COMMENT '身份证号码',
-  `photo` varchar(200) NOT NULL DEFAULT '' COMMENT '照片',
+  `card_name` varchar(50) DEFAULT NULL COMMENT '证件姓名',
+  `card_sex` int(11) NOT NULL DEFAULT '1' COMMENT '证件性别 1-male 2-female',
+  `card_address` varchar(200) NOT NULL DEFAULT '' COMMENT '证件地址',
+  `card_id` varchar(50) NOT NULL DEFAULT '' COMMENT '身份证号码',
+  `head_img` varchar(200) NOT NULL DEFAULT '' COMMENT '头部照片',
   `created_at` int(11) unsigned NOT NULL COMMENT '创建时间',
   `updated_at` int(11) unsigned NOT NULL COMMENT '修改时间',
-  PRIMARY KEY (`uid`),
-  UNIQUE KEY `index_batch_code` (`name`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4;
+  `identify` int(11) DEFAULT '0' COMMENT '认证状态 0-未认证 1-认证成功 2-审核中',
+  `udid` varchar(200) NOT NULL DEFAULT '' COMMENT '设备号',
+  PRIMARY KEY (`urid`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of m_user
 -- ----------------------------
+INSERT INTO `m_user` VALUES ('1', '123', '202cb962ac59075b964b07152d234b70', '', null, '1', null, '1', '', '', '', '11', '11', '0', '');
+INSERT INTO `m_user` VALUES ('17', '13917438216', 'e10adc3949ba59abbe56e057f20f883e', '12311', null, '1', null, '1', '', '', '', '1514276705', '1514276705', '0', '');
+
+-- ----------------------------
+-- Table structure for m_user_mobile
+-- ----------------------------
+DROP TABLE IF EXISTS `m_user_mobile`;
+CREATE TABLE `m_user_mobile` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `mobile` varchar(20) NOT NULL DEFAULT '' COMMENT '手机号码',
+  `created_at` int(11) unsigned NOT NULL COMMENT '创建时间',
+  `updated_at` int(11) unsigned NOT NULL COMMENT '修改时间',
+  `is_valid` int(2) DEFAULT NULL,
+  `type` int(2) DEFAULT NULL,
+  `verifycode` varchar(20) DEFAULT NULL,
+  `expire` int(11) DEFAULT NULL,
+  `last_sendtime` int(11) DEFAULT NULL,
+  `error_num` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+-- ----------------------------
+-- Records of m_user_mobile
+-- ----------------------------
+INSERT INTO `m_user_mobile` VALUES ('1', '13917438216', '1514273548', '1514279821', '1', '2', '1234', '1514281580', '0', '0');
