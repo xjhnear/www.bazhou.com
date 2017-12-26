@@ -36,13 +36,10 @@ class UserController extends BaseController
 	public function smsVerify()
 	{
 		$mobile = Input::get('mobile');
-		$type = Input::get('type');
+		$type = Input::get('type',0);
 		$udid = Input::get('udid');
 		if(!$mobile){
 			return $this->fail(202,'手机号不能为空');
-		}
-		if(!$type){
-			return $this->fail(202,'参数异常');
 		}
 		$result = UserService::sendPhoneVerifyCode($mobile, $type, $udid);
 		if($result['result']){
@@ -60,7 +57,7 @@ class UserController extends BaseController
 		$mobile = Input::get('mobile');
 		$password = Input::get('password');
 		$verifycode = Input::get('verifycode');
-		$type = Input::get('type');
+		$type = Input::get('type',0);
 		$urid = Input::get('urid',0);
 		if(!$mobile){
 			return $this->fail(202,'手机号不能为空');
@@ -71,21 +68,32 @@ class UserController extends BaseController
 		if(!$verifycode){
 			return $this->fail(202,'验证码不能为空');
 		}
-		if(!$type){
-			return $this->fail(202,'参数异常');
-		}
 		$result = UserService::verifyPhoneVerifyCode($mobile, $type, $verifycode);
 		if($result['result']){
 			switch ($type) {
 				case 0:
 					//注册
-					$user = UserService::createUserByPhone($mobile, $password);
-					if($user['result']){
-						$urid = array('urid'=>$user['data']);
-						return $this->success($urid);
+					$result_pwd = UserService::checkPasswordbyMobile($mobile, $password, 0);
+					if($result_pwd['result']){
+						$urid = $result_pwd['data']['urid'];
+						$input['register'] = 1;
+						$user = UserService::modifyUserInfo($urid, $input);
+						if($user['result']){
+							$urid = array('urid'=>$urid);
+							return $this->success($urid);
+						}else{
+							return $this->fail(201,$user['msg']);
+						}
 					}else{
-						return $this->fail(201,$user['msg']);
+						return $this->fail(201,'手机号码信息未采集');
 					}
+//					$user = UserService::createUserByPhone($mobile, $password);
+//					if($user['result']){
+//						$urid = array('urid'=>$user['data']);
+//						return $this->success($urid);
+//					}else{
+//						return $this->fail(201,$user['msg']);
+//					}
 					break;
 				case 1:
 					//忘记密码

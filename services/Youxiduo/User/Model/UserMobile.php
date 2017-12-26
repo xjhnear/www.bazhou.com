@@ -35,6 +35,7 @@ final class UserMobile extends Model implements IModel
 			$data['expire'] = time() + 60*30;
 			$data['last_sendtime'] = time();
 			$data['updated_at'] = time();
+			$data['error_num'] = 0;
 			$res = self::db()->where('mobile','=',$mobile)->update($data);
 		}else{
 			$data = array();
@@ -46,6 +47,7 @@ final class UserMobile extends Model implements IModel
 			$data['type'] = $type;
 			$data['expire'] = time() + 60*30;
 			$data['last_sendtime'] = time();
+			$data['error_num'] = 0;
 			$res = self::db()->insertGetId($data);
 		}
 		return $res ? true : false;

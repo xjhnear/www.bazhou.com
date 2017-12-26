@@ -23,16 +23,16 @@ use Illuminate\Support\Facades\DB;
 class UserService extends BaseService
 {
 
-	public static function checkPassword($urid,$password)
+	public static function checkPassword($urid,$password,$register=1)
 	{
-		$user = User::doLocalLogin($urid,User::IDENTIFY_FIELD_URID,$password);
+		$user = User::doLocalLogin($urid,User::IDENTIFY_FIELD_URID,$password,$register);
 		$exists = $user ? true : false;
 		return array('result'=>$exists,'data'=>$user);
 	}
 
-	public static function checkPasswordbyMobile($mobile,$password)
+	public static function checkPasswordbyMobile($mobile,$password,$register=1)
 	{
-		$user = User::doLocalLogin($mobile,User::IDENTIFY_FIELD_MOBILE,$password);
+		$user = User::doLocalLogin($mobile,User::IDENTIFY_FIELD_MOBILE,$password,$register);
 		$exists = $user ? true : false;
 		return array('result'=>$exists,'data'=>$user);
 	}
@@ -152,7 +152,7 @@ class UserService extends BaseService
 	{
 		if(!$urid) return false;
 
-		$fields = array('name','avatar','sex','identify');
+		$fields = array('name','avatar','sex','identify','register');
 		$data = array();
 		//过滤非法字段
 		foreach($fields as $field){

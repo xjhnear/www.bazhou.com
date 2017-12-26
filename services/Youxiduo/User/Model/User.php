@@ -33,13 +33,18 @@ final class User extends Model implements IModel
 	/**
 	 * 账号登录
 	 */
-	public static function doLocalLogin($identify,$identify_field,$password)
+	public static function doLocalLogin($identify,$identify_field,$password,$register)
 	{
 		if(!in_array($identify_field,array('urid','mobile'))) return false;
 		if(strlen($password) != 32){
 			$password = Utility::cryptPwd($password);
 		}
-		$user = self::db()->where($identify_field,'=',$identify)->where('password','=',$password)->first();
+		$user = self::db();
+		$user = $user->where($identify_field,'=',$identify)->where('password','=',$password);
+		if ($register==1) {
+			$user = $user->where('register','=',$register);
+		}
+		$user = $user->first();
 		return $user;
 	}
 

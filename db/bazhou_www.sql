@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2017-12-26 18:29:55
+Date: 2017-12-26 19:58:39
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -161,6 +161,7 @@ CREATE TABLE `m_user` (
   `created_at` int(11) unsigned NOT NULL COMMENT '创建时间',
   `updated_at` int(11) unsigned NOT NULL COMMENT '修改时间',
   `identify` int(11) DEFAULT '0' COMMENT '认证状态 0-未认证 1-认证成功 2-审核中',
+  `register` int(11) DEFAULT '0' COMMENT '是否注册',
   `udid` varchar(200) NOT NULL DEFAULT '' COMMENT '设备号',
   PRIMARY KEY (`urid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
@@ -168,8 +169,8 @@ CREATE TABLE `m_user` (
 -- ----------------------------
 -- Records of m_user
 -- ----------------------------
-INSERT INTO `m_user` VALUES ('1', '123', '202cb962ac59075b964b07152d234b70', '', null, '1', null, '1', '', '', '', '11', '11', '0', '');
-INSERT INTO `m_user` VALUES ('17', '13917438216', 'e10adc3949ba59abbe56e057f20f883e', '12311', null, '1', null, '1', '', '', '', '1514276705', '1514276705', '0', '');
+INSERT INTO `m_user` VALUES ('1', '123', '202cb962ac59075b964b07152d234b70', '', null, '1', null, '1', '', '', '', '11', '11', '0', '0', '');
+INSERT INTO `m_user` VALUES ('17', '13917438216', 'e10adc3949ba59abbe56e057f20f883e', '12311', null, '1', null, '1', '', '', '', '1514276705', '1514276705', '0', '1', '');
 
 -- ----------------------------
 -- Table structure for m_user_mobile
@@ -192,4 +193,4 @@ CREATE TABLE `m_user_mobile` (
 -- ----------------------------
 -- Records of m_user_mobile
 -- ----------------------------
-INSERT INTO `m_user_mobile` VALUES ('1', '13917438216', '1514273548', '1514279821', '1', '2', '1234', '1514281580', '0', '0');
+INSERT INTO `m_user_mobile` VALUES ('1', '13917438216', '1514273548', '1514289483', '1', '0', '1234', '1514291221', '0', '0');
