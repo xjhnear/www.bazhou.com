@@ -15,6 +15,7 @@ use Youxiduo\Base\BaseService;
 use Youxiduo\User\Model\Feedback;
 use Youxiduo\User\Model\User;
 use Youxiduo\User\Model\UserMobile;
+use Youxiduo\User\UploaderService;
 use Youxiduo\Helper\Utility;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\DB;
@@ -152,7 +153,7 @@ class UserService extends BaseService
 	{
 		if(!$urid) return false;
 
-		$fields = array('name','avatar','sex','identify','register');
+		$fields = array('name','avatar','sex','identify','register','numbers','video');
 		$data = array();
 		//过滤非法字段
 		foreach($fields as $field){
@@ -180,6 +181,47 @@ class UserService extends BaseService
 			return array('result'=>true,'data'=>$ruselt);
 		}
 		return array('result'=>false,'msg'=>"用户不存在");
+	}
+
+	/**
+	 * 视频上传
+	 * @param $videoinfo - 视频的资源，数组类型。['视频类型','视频大小','视频进行base64加密后的字符串']
+	 * @return mixed
+	 */
+	public function uploadVideo($videoinfo) {
+		$video_type = strip_tags($videoinfo[0]);  //视频类型
+		$video_size = intval($videoinfo[1]);  //视频大小
+		$video_base64_content = strip_tags($videoinfo[2]); //视频进行base64编码后的字符串
+
+		$upload = new UploaderService();
+		$upconfig = $upload->upconfig;
+
+		if(($video_size > $upconfig['maxSize']) || ($video_size == 0)) {
+			$array['result'] = 13;
+			$array['comment'] = "视频大小不符合要求！";
+			return $array;
+		}
+
+		if(!in_array($video_type,$upconfig['exts'])) {
+			$array['result'] = 14;
+			$array['comment'] = "视频格式不符合要求！";
+			return $array;
+		}
+
+		// 设置附件上传子目录
+		$savePath = public_path().'/downloads/video/';
+		$upload->upconfig['savePath'] = $savePath;
+
+		//视频保存的名称
+		$new_videoname = uniqid().mt_rand(100,999).'.'.$video_type;
+
+		//base64解码后的视频字符串
+		$string_video_content = base64_decode($video_base64_content);
+
+		// 保存上传的文件
+		$array = $upload->upload($string_video_content,$new_videoname);
+
+		return $array;
 	}
 
 }

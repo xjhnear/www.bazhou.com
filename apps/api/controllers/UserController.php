@@ -210,5 +210,27 @@ class UserController extends BaseController
 		}
 	}
 
+	public function identify()
+	{
+		$urid = Input::get('urid',0);
+		$video = Input::get('video');
+		$numbers = Input::get('numbers');
+		if($urid <= 0 || !$video || !$numbers){
+			return $this->fail(202,'参数异常');
+		}
+		$result_video = UserService::uploadVideo($video);
+		if($result_video['result']<>0){
+			return $this->fail(201,$result_video['comment']);
+		}
+		$input['numbers'] = $numbers;
+		$input['video'] = $result_video['videoname'];
+		$result_user = UserService::modifyUserInfo($urid,$input);
+		$result = UserService::getUseridentify($urid);
+		if($result['result']){
+			return $this->success($result['data']);
+		}else{
+			return $this->fail(201,$result['msg']);
+		}
+	}
 
 }
