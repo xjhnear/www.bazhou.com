@@ -1,0 +1,67 @@
+<?php
+namespace modules\user\controllers;
+
+use Yxd\Modules\Core\BackendController;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Paginator;
+
+use Youxiduo\User\Model\User;
+
+use Illuminate\Support\Facades\DB;
+
+class UserController extends BackendController
+{
+	public function _initialize(){
+		$this->current_module = 'user';
+	}
+	
+	public function getList()
+	{
+		$pageIndex = Input::get('page',1);
+		$search = Input::only('mobile','name');
+		$pageSize = 10;
+		$data = array();
+		$data['datalist'] = User::getList($search,$pageIndex,$pageSize);
+		$data['search'] = $search;
+		$total = User::getCount($search);
+		$pager = Paginator::make(array(),$total,$pageSize);
+		$pager->appends($search);
+		$data['pagelinks'] = $pager->links();
+		return $this->display('user_list',$data);
+	}
+	
+	public function getAdd()
+	{
+		$data = array();
+		return $this->display('user_info',$data);
+	}
+	
+	public function getEdit($urid)
+	{
+		$data = array();
+		$data['info'] = User::getInfo($urid);
+		return $this->display('user_info',$data);
+	}
+	
+	public function postSave()
+	{
+		$input = Input::only('urid','mobile','card_name','card_sex','card_address','card_id','head_img');
+
+		$result = User::save($input);
+		if($result){
+			return $this->redirect('phone/batch/list','用户保存成功');
+		}else{
+			return $this->back('用户保存成功');
+		}
+	}
+
+	public function postAjaxDel()
+	{
+		$urid = Input::get('urid');
+		if($urid){
+			User::del($urid);
+		}
+		return json_encode(array('state'=>1,'msg'=>'用户删除成功'));
+	}
+
+}

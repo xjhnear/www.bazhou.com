@@ -165,6 +165,66 @@ final class User extends Model implements IModel
 		return $res;
 	}
 
+	//后台
+	public static function getList($search,$pageIndex=1,$pageSize=20)
+	{
+		$tb = self::db();
+		if(isset($search['name']) && !empty($search['name'])) $tb = $tb->where('name','like','%'.$search['name'].'%');
+		if(isset($search['mobile']) && !empty($search['mobile'])) $tb = $tb->where('mobile','=',$search['mobile']);
+		return $tb->orderBy('created_at','desc')->forPage($pageIndex,$pageSize)->get();
+	}
 
+	public static function getCount($search)
+	{
+		$tb = self::db();
+		if(isset($search['name']) && !empty($search['name'])) $tb = $tb->where('name','like','%'.$search['name'].'%');
+		if(isset($search['mobile']) && !empty($search['mobile'])) $tb = $tb->where('mobile','=',$search['mobile']);
+		return $tb->count();
+	}
+
+	public static function getInfo($urid)
+	{
+		$batch = self::db()->where('urid','=',$urid)->first();
+		if(!$batch) return array();
+		return $batch;
+	}
+	
+	public static function m_search($search)
+	{
+		$tb = self::m_buildSearch($search);
+		return $tb->orderBy('urid','desc')->get();
+	}
+
+	protected static function m_buildSearch($search)
+	{
+		$tb = self::db();
+		if(isset($search['name'])){
+			$tb = $tb->where('name','like','%'.$search['name'].'%');
+		}
+		return $tb;
+	}
+
+	public static function save($data)
+	{
+		if(isset($data['urid']) && $data['urid']){
+			$urid = $data['urid'];
+			unset($data['urid']);
+			$data['updated_at'] = time();
+			return self::db()->where('urid','=',$urid)->update($data);
+		}else{
+			unset($data['urid']);
+			$data['created_at'] = time();
+			$data['updated_at'] = time();
+			return self::db()->insertGetId($data);
+		}
+	}
+
+	public static function del($urid)
+	{
+		if($urid > 0){
+			$re = self::db()->where('urid','=',$urid)->delete();
+		}
+		return $re;
+	}
 
 }
