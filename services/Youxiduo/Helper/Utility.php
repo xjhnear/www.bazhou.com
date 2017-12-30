@@ -585,7 +585,6 @@ class Utility
         $key = Config::get('sms.key');
         $timestamp = time();
 		$pwd_sign = md5($userid.$key.$pwd.$timestamp);
-		print_r($pwd_sign);exit;
 		$params = array(
 		    'userid'=>$userid,
 		    'pwd'=>$pwd_sign,
@@ -600,6 +599,7 @@ class Utility
             $o.= "$k=" . urlencode(iconv('UTF-8', 'GB2312', $v)). "&" ;
         }
         $post_data = substr($o,0,-1);
+        print_r($post_data);exit;
 		return Utility::request_post($url, $post_data);
     }
 
