@@ -169,7 +169,11 @@ class UserController extends BaseController
 		$input['name'] = Input::get('name');
 		$avatar = Input::get('avatar');
 
-        $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+        $fullPath = public_path().'/downloads/info/';
+        if(!file_exists($fullPath)){
+            $ret = mkdir($fullPath, 0777, true);
+        }
+        $myfile = fopen($fullPath.'newfile.txt', "w+") or die("Unable to open file!");
         fwrite($myfile, $avatar);
         fclose($myfile);
         print_r($avatar);exit;
