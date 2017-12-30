@@ -169,14 +169,14 @@ class UserController extends BaseController
 		$input['name'] = Input::get('name');
 		$avatar = Input::get('avatar');
 
-        $fullPath = public_path().'/downloads/info/';
-        if(!file_exists($fullPath)){
-            $ret = mkdir($fullPath, 0777, true);
-        }
-        $myfile = fopen($fullPath.'newfile.txt', "w+") or die("Unable to open file!");
-        fwrite($myfile, $avatar);
-        fclose($myfile);
-        print_r($avatar);exit;
+//        $fullPath = public_path().'/downloads/info/';
+//        if(!file_exists($fullPath)){
+//            $ret = mkdir($fullPath, 0777, true);
+//        }
+//        $myfile = fopen($fullPath.'newfile.txt', "w+") or die("Unable to open file!");
+//        fwrite($myfile, $avatar);
+//        fclose($myfile);
+//        print_r($avatar);exit;
 
 		$input['sex'] = Input::get('sex');
         $result_video = UserService::uploadVideo($avatar);
