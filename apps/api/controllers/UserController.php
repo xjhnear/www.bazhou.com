@@ -6,6 +6,7 @@ use Yxd\Services\UserFeedService;
 use Yxd\Services\RelationService;
 use Illuminate\Support\Facades\Input;
 use Youxiduo\User\UserService;
+use Youxiduo\User\imageUpload;
 use Yxd\Utility\ImageHelper;
 
 use PHPImageWorkshop\ImageWorkshop;
@@ -169,12 +170,15 @@ class UserController extends BaseController
 		$input['name'] = Input::get('name');
 		$avatar = Input::get('avatar');
 
-        $avatar = file_get_contents("php://input");
 
         $fullPath = public_path().'/downloads/info/';
         if(!file_exists($fullPath)){
             $ret = mkdir($fullPath, 0777, true);
         }
+
+        $imageUpload = new imageUpload('new.png', $fullPath);
+        $avatar = $imageUpload->image_name;
+
         $myfile = fopen($fullPath.'newfile.txt', "w+") or die("Unable to open file!");
         fwrite($myfile, $avatar);
         fclose($myfile);
