@@ -81,7 +81,7 @@ class UserController extends BackendController
         if($urid){
             User::modifyUserInfo($urid,array('identify'=>1));
         }
-        return json_encode(array('state'=>1,'msg'=>'用户删除成功'));
+        return json_encode(array('state'=>1,'msg'=>'用户审核提交成功'));
     }
 
     public function postAjaxRemove()
@@ -90,7 +90,7 @@ class UserController extends BackendController
         if($urid){
             User::modifyUserInfo($urid,array('identify'=>0));
         }
-        return json_encode(array('state'=>1,'msg'=>'用户删除成功'));
+        return json_encode(array('state'=>1,'msg'=>'用户审核提交成功'));
     }
 
 }
