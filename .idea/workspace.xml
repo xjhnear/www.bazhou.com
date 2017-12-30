@@ -50,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Utility.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Utility.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/Youxiduo/Helper/Utility.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -69,6 +69,16 @@
                 <marker date="1514645257183" expanded="false" signature="34022:34057" ph="..." />
                 <marker date="1514645257183" expanded="true" signature="34114:34234" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="73" column="32" lean-forward="false" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -151,7 +161,6 @@
         <option value="$PROJECT_DIR$/apps/admin/modules/phone/controllers/BatchController.php" />
         <option value="$PROJECT_DIR$/apps/admin/modules/phone/views/batch_list.twig" />
         <option value="$PROJECT_DIR$/apps/api/filters.php" />
-        <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/apps/api/controllers/AppController.php" />
         <option value="$PROJECT_DIR$/apps/api/routes.php" />
         <option value="$PROJECT_DIR$/services/Youxiduo/Phone/Model/PhoneBatch.php" />
@@ -179,6 +188,7 @@
         <option value="$PROJECT_DIR$/apps/api/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/services/Youxiduo/User/UserService.php" />
         <option value="$PROJECT_DIR$/services/Youxiduo/Helper/Utility.php" />
+        <option value="$PROJECT_DIR$/config/database.php" />
       </list>
     </option>
   </component>
@@ -411,12 +421,12 @@
       <option name="presentableId" value="Default" />
       <updated>1505115690505</updated>
       <workItem from="1514108643233" duration="29000" />
-      <workItem from="1514602083325" duration="29580000" />
+      <workItem from="1514602083325" duration="30129000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29609000" />
+    <option name="totallyTimeSpent" value="30158000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -500,13 +510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="57" column="10" lean-forward="false" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="73" column="30" lean-forward="false" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -921,6 +924,14 @@
             <marker date="1514645257183" expanded="false" signature="34022:34057" ph="..." />
             <marker date="1514645257183" expanded="true" signature="34114:34234" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="73" column="32" lean-forward="false" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
