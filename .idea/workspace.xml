@@ -30,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/api/controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="171" column="45" lean-forward="false" selection-start-line="171" selection-start-column="45" selection-end-line="171" selection-end-column="45" />
+            <state relative-caret-position="367">
+              <caret line="43" column="46" lean-forward="false" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -43,8 +43,51 @@
       <file leaf-file-name="UserService.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/Youxiduo/User/UserService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="204" column="54" lean-forward="true" selection-start-line="204" selection-start-column="54" selection-end-line="204" selection-end-column="54" />
+            <state relative-caret-position="386">
+              <caret line="50" column="45" lean-forward="false" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utility.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/services/Youxiduo/Helper/Utility.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="587" column="32" lean-forward="false" selection-start-line="587" selection-start-column="32" selection-end-line="587" selection-end-column="32" />
+              <folding>
+                <marker date="1514645257183" expanded="true" signature="29703:29719" ph="..." />
+                <marker date="1514645257183" expanded="true" signature="29980:30637" ph="..." />
+                <marker date="1514645257183" expanded="true" signature="30734:30740" ph=" " />
+                <marker date="1514645257183" expanded="true" signature="30740:30746" ph=" " />
+                <marker date="1514645257183" expanded="true" signature="32169:32185" ph="..." />
+                <marker date="1514645257183" expanded="true" signature="32415:34390" ph="..." />
+                <marker date="1514645257183" expanded="true" signature="32425:33956" ph="..." />
+                <marker date="1514645257183" expanded="true" signature="32484:33945" ph="..." />
+                <marker date="1514645257183" expanded="true" signature="33966:34379" ph="..." />
+                <marker date="1514645257183" expanded="true" signature="33986:34292" ph="..." />
+                <marker date="1514645257183" expanded="false" signature="34022:34057" ph="..." />
+                <marker date="1514645257183" expanded="true" signature="34114:34234" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/api/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="32" column="42" lean-forward="true" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="global.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/api/start/global.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -73,7 +116,11 @@
       <find>gameListPicturegameListPicture</find>
       <find>gameDetailPicture</find>
       <find>gameListPicture</find>
+      <find>Server Error</find>
     </findStrings>
+    <dirStrings>
+      <dir>D:\wamp64\www\www.bazhou.com</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -105,7 +152,6 @@
         <option value="$PROJECT_DIR$/apps/admin/modules/phone/views/batch_list.twig" />
         <option value="$PROJECT_DIR$/apps/api/filters.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
-        <option value="$PROJECT_DIR$/apps/api/start/global.php" />
         <option value="$PROJECT_DIR$/apps/api/controllers/AppController.php" />
         <option value="$PROJECT_DIR$/apps/api/routes.php" />
         <option value="$PROJECT_DIR$/services/Youxiduo/Phone/Model/PhoneBatch.php" />
@@ -123,15 +169,16 @@
         <option value="$PROJECT_DIR$/web/api/index.php" />
         <option value="$PROJECT_DIR$/apps/api/config/sms.php" />
         <option value="$PROJECT_DIR$/config/sms.php" />
-        <option value="$PROJECT_DIR$/services/Youxiduo/Helper/Utility.php" />
         <option value="$PROJECT_DIR$/services/Youxiduo/Helper/MyHelp.php" />
         <option value="$PROJECT_DIR$/apps/admin/modules/user/views/user_list.twig" />
         <option value="$PROJECT_DIR$/apps/admin/modules/user/views/user_info.twig" />
         <option value="$PROJECT_DIR$/apps/admin/modules/user/views/user_video.twig" />
         <option value="$PROJECT_DIR$/apps/admin/modules/user/controllers/UserController.php" />
-        <option value="$PROJECT_DIR$/apps/api/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/services/Youxiduo/User/UploaderService.php" />
+        <option value="$PROJECT_DIR$/apps/api/start/global.php" />
+        <option value="$PROJECT_DIR$/apps/api/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/services/Youxiduo/User/UserService.php" />
+        <option value="$PROJECT_DIR$/services/Youxiduo/Helper/Utility.php" />
       </list>
     </option>
   </component>
@@ -199,9 +246,9 @@
   </component>
   <component name="PhpXdebugProxy" ide_key="phpStorm" host="localhost" port="80" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="479" />
+    <option name="x" value="662" />
     <option name="y" value="66" />
-    <option name="width" value="1435" />
+    <option name="width" value="1252" />
     <option name="height" value="979" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -254,62 +301,6 @@
               <item name="www.bazhou.com" type="b2602c69:ProjectViewProjectNode" />
               <item name="www.bazhou.com" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="apps" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="www.bazhou.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www.bazhou.com" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="apps" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="www.bazhou.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www.bazhou.com" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="apps" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="phone" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="www.bazhou.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www.bazhou.com" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="apps" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="phone" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="www.bazhou.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www.bazhou.com" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="apps" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="user" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="www.bazhou.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www.bazhou.com" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="apps" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="user" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="www.bazhou.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www.bazhou.com" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="apps" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="user" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="www.bazhou.com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="www.bazhou.com" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="apps" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -318,6 +309,13 @@
               <item name="apps" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="www.bazhou.com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="www.bazhou.com" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="apps" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="start" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="www.bazhou.com" type="b2602c69:ProjectViewProjectNode" />
@@ -413,12 +411,12 @@
       <option name="presentableId" value="Default" />
       <updated>1505115690505</updated>
       <workItem from="1514108643233" duration="29000" />
-      <workItem from="1514602083325" duration="26580000" />
+      <workItem from="1514602083325" duration="29580000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26609000" />
+    <option name="totallyTimeSpent" value="29609000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -430,19 +428,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="479" y="66" width="1435" height="979" extended-state="0" />
+    <frame x="662" y="66" width="1252" height="979" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19309373" sideWeight="0.49413735" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.49451303" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1499472" sideWeight="0.5140625" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875723" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.49781388" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2248062" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="1020" y="127" width="316" height="769" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.49421966" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22168285" sideWeight="0.49413735" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875723" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20828106" sideWeight="0.4859375" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18932039" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="1020" y="127" width="316" height="769" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17413294" sideWeight="0.50586265" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2379349" sideWeight="0.48971194" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -453,7 +452,6 @@
       <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.6235549" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.49710983" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20828106" sideWeight="0.4859375" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
     </layout>
@@ -491,20 +489,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/api/config/session.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/api/config/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/api/config/workbench.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -523,13 +507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="73" column="30" lean-forward="false" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/api/start/global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="61" column="3" lean-forward="false" selection-start-line="61" selection-start-column="3" selection-end-line="61" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -647,17 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/api/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="43" column="12" lean-forward="false" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="22" />
-          <folding>
-            <element signature="e#7#392#0#PHP" expanded="false" />
-            <element signature="e#393#431#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/api/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -695,27 +661,6 @@
         <state relative-caret-position="280">
           <caret line="519" column="9" lean-forward="false" selection-start-line="519" selection-start-column="9" selection-end-line="519" selection-end-column="9" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/Youxiduo/Helper/Utility.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="590" column="29" lean-forward="true" selection-start-line="590" selection-start-column="29" selection-end-line="590" selection-end-column="29" />
-          <folding>
-            <marker date="1514614153927" expanded="true" signature="29679:29695" ph="..." />
-            <marker date="1514614153927" expanded="true" signature="29956:30613" ph="..." />
-            <marker date="1514614153927" expanded="true" signature="30710:30716" ph=" " />
-            <marker date="1514614153927" expanded="true" signature="30716:30722" ph=" " />
-            <marker date="1514614153927" expanded="true" signature="32145:32161" ph="..." />
-            <marker date="1514614153927" expanded="true" signature="32391:34366" ph="..." />
-            <marker date="1514614153927" expanded="true" signature="32401:33932" ph="..." />
-            <marker date="1514614153927" expanded="true" signature="32460:33921" ph="..." />
-            <marker date="1514614153927" expanded="true" signature="33942:34355" ph="..." />
-            <marker date="1514614153927" expanded="true" signature="33962:34268" ph="..." />
-            <marker date="1514614153927" expanded="false" signature="33998:34033" ph="..." />
-            <marker date="1514614153927" expanded="true" signature="34090:34210" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -897,7 +842,7 @@
         <state relative-caret-position="556">
           <caret line="88" column="35" lean-forward="false" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
           <folding>
-            <element signature="e#43#82#0#PHP" expanded="true" />
+            <element signature="e#43#82#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -910,19 +855,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/Youxiduo/User/UserService.php">
+    <entry file="file://$PROJECT_DIR$/apps/admin/start/global.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="204" column="54" lean-forward="true" selection-start-line="204" selection-start-column="54" selection-end-line="204" selection-end-column="54" />
+        <state relative-caret-position="331">
+          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/api/filters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="112" column="3" lean-forward="true" selection-start-line="112" selection-start-column="3" selection-end-line="112" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/api/start/global.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/api/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="32" column="42" lean-forward="true" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/api/controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="171" column="45" lean-forward="false" selection-start-line="171" selection-start-column="45" selection-end-line="171" selection-end-column="45" />
+        <state relative-caret-position="367">
+          <caret line="43" column="46" lean-forward="false" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/Youxiduo/User/UserService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="50" column="45" lean-forward="false" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/Youxiduo/Helper/Utility.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="587" column="32" lean-forward="false" selection-start-line="587" selection-start-column="32" selection-end-line="587" selection-end-column="32" />
+          <folding>
+            <marker date="1514645257183" expanded="true" signature="29703:29719" ph="..." />
+            <marker date="1514645257183" expanded="true" signature="29980:30637" ph="..." />
+            <marker date="1514645257183" expanded="true" signature="30734:30740" ph=" " />
+            <marker date="1514645257183" expanded="true" signature="30740:30746" ph=" " />
+            <marker date="1514645257183" expanded="true" signature="32169:32185" ph="..." />
+            <marker date="1514645257183" expanded="true" signature="32415:34390" ph="..." />
+            <marker date="1514645257183" expanded="true" signature="32425:33956" ph="..." />
+            <marker date="1514645257183" expanded="true" signature="32484:33945" ph="..." />
+            <marker date="1514645257183" expanded="true" signature="33966:34379" ph="..." />
+            <marker date="1514645257183" expanded="true" signature="33986:34292" ph="..." />
+            <marker date="1514645257183" expanded="false" signature="34022:34057" ph="..." />
+            <marker date="1514645257183" expanded="true" signature="34114:34234" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

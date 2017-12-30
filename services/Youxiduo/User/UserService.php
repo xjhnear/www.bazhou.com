@@ -188,7 +188,7 @@ class UserService extends BaseService
 	 * @param $videoinfo - 视频的资源，数组类型。['视频类型','视频大小','视频进行base64加密后的字符串']
 	 * @return mixed
 	 */
-	public function uploadVideo($videoinfo) {
+	public static function uploadVideo($videoinfo) {
 		$video_type = strip_tags($videoinfo[0]);  //视频类型
 		$video_size = intval($videoinfo[1]);  //视频大小
 		$video_base64_content = strip_tags($videoinfo[2]); //视频进行base64编码后的字符串
