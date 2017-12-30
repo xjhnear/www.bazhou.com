@@ -565,12 +565,10 @@ class Utility
         return $response;
     }
     
-     public static function sendVerifySMS($mobile,$code,$sms=true,$appname='yxdandroid')
+     public static function sendVerifySMS($mobile,$code,$sms=true)
     {    	
     	$to = $mobile;
-    	if($sms==true && $appname=='duoyou_android'){
-    	    $text = str_replace('{code}',$code,Config::get('sms.template_duoyou',''));
-    	}elseif ($sms==true){
+    	if ($sms==true){
     	    $text = str_replace('{code}',$code,Config::get('sms.template',''));
     	}else{
     		$text = $code;
@@ -581,20 +579,49 @@ class Utility
     
     public static function sendSMS($to,$text,$from,$sms=true)
     {
-    	$url = Config::get('sms.gateway');	
-		$key = Config::get('sms.secret');;
-		$sign = strtoupper(md5($from.$to.$text.$key));
+    	$url = Config::get('sms.gateway');
+		$userid = Config::get('sms.userid');
+        $pwd = Config::get('sms.pwd');
+        $key = Config::get('sms.key');
+        $timestamp = time();
+		$pwd_sign = md5($userid.$key.$pwd.$timestamp);
 		
 		$params = array(
-		    'from'=>$from,
-		    'to'=>$to,
-		    'txt'=>$text,
-		    'sign'=>$sign,
-		    'sendBy'=>$sms==true ? 'SMS':'IVR'			    
-		);		
-		return Utility::httpByJson($url,$params,'POST');
+		    'userid'=>$userid,
+		    'pwd'=>$pwd_sign,
+		    'mobile'=>$to,
+		    'content'=>$text,
+		    'timestamp'=>$timestamp
+		);
+
+        $o = "";
+        foreach ( $params as $k => $v )
+        {
+            $o.= "$k=" . urlencode(iconv('UTF-8', 'GB2312', $v)). "&" ;
+        }
+        $post_data = substr($o,0,-1);
+		return Utility::request_post($url, $post_data);
     }
-    
+
+    public static function request_post($url = '', $param = '') {
+        if (empty($url) || empty($param)) {
+            return false;
+        }
+
+        $postUrl = $url;
+        $curlPost = $param;
+        $ch = curl_init();//初始化curl
+        curl_setopt($ch, CURLOPT_URL,$postUrl);//抓取指定网页
+        curl_setopt($ch, CURLOPT_HEADER, 0);//设置header
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//要求结果为字符串且输出到屏幕上
+        curl_setopt($ch, CURLOPT_POST, 1);//post提交方式
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $curlPost);
+        $data = curl_exec($ch);//运行curl
+        curl_close($ch);
+
+        return $data;
+    }
+
     public static function httpByJson($url,$params = array(), $method = 'GET',$platform='',$multi = false, $extheaders = array())
     {
     	$format = 'json';
@@ -604,6 +631,7 @@ class Utility
 	        $keyname = $platform=='android' ? 'app.android_core_api_url' : 'app.ios_core_api_url';
 	        $url = Config::get($keyname) .$url;
         }
+
         $ci = curl_init();
         curl_setopt($ci, CURLOPT_USERAGENT, 'PHP-SDK API');
         curl_setopt($ci, CURLOPT_CONNECTTIMEOUT, 30);

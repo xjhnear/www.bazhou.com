@@ -45,10 +45,10 @@ class UserService extends BaseService
 	public static function sendPhoneVerifyCode($mobile,$type,$udid,$sms=true)
 	{
 		if(Utility::validateMobile($mobile)===true){
-			$verifycode = Utility::random(4,'alnum');
-			$verifycode = '1234';
+			$verifycode = Utility::random(6,'alnum');
+//			$verifycode = '123456';
 			$result = UserMobile::saveVerifyCodeByPhone($mobile,$type,$verifycode,false,$udid);
-//			$result==true && Utility::sendVerifySMS($mobile,$verifycode,$sms);
+			$result==true && Utility::sendVerifySMS($mobile,$verifycode,$sms);
 			return array('result'=>true,'data'=>$result);
 		}
 		return array('result'=>false,'msg'=>"手机号无效");

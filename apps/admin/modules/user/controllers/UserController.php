@@ -4,7 +4,7 @@ namespace modules\user\controllers;
 use Yxd\Modules\Core\BackendController;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Paginator;
-
+use Youxiduo\Helper\MyHelp;
 use Youxiduo\User\Model\User;
 
 use Illuminate\Support\Facades\DB;
@@ -45,11 +45,15 @@ class UserController extends BackendController
 	
 	public function postSave()
 	{
-		$input = Input::only('urid','mobile','card_name','card_sex','card_address','card_id','head_img');
-
+		$input = Input::only('urid','mobile','card_name','card_sex','card_address','card_id','head_img','old_head_img');
+		$head_img = $input['old_head_img'];unset($input['old_head_img']);
+        if(Input::hasFile('head_img')){
+            $head_img = MyHelp::save_img_no_url(Input::file('head_img'),'head_img');
+        }
+        $input['head_img'] = $head_img;
 		$result = User::save($input);
 		if($result){
-			return $this->redirect('phone/batch/list','用户保存成功');
+			return $this->redirect('user/user/list','用户保存成功');
 		}else{
 			return $this->back('用户保存成功');
 		}
@@ -63,5 +67,30 @@ class UserController extends BackendController
 		}
 		return json_encode(array('state'=>1,'msg'=>'用户删除成功'));
 	}
+
+    public function getVideo($urid)
+    {
+        $data = array();
+        $data['info'] = User::getInfo($urid);
+        return $this->display('user_video',$data);
+    }
+
+    public function postAjaxOk()
+    {
+        $urid = Input::get('urid');
+        if($urid){
+            User::modifyUserInfo($urid,array('identify'=>1));
+        }
+        return json_encode(array('state'=>1,'msg'=>'用户删除成功'));
+    }
+
+    public function postAjaxRemove()
+    {
+        $urid = Input::get('urid');
+        if($urid){
+            User::modifyUserInfo($urid,array('identify'=>0));
+        }
+        return json_encode(array('state'=>1,'msg'=>'用户删除成功'));
+    }
 
 }

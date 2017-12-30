@@ -220,12 +220,12 @@ class MyHelp
         return $titlePic;
     }
 
-    public static function save_img_no_url($img,$dir_='adv'){
+    public static function save_img_no_url($img,$dir_='user'){
         $titlePic ="";
         if($img) {
             if (!isset($dir)) {
                 $dir = '/userdirs/'.$dir_.'/' . date('Y') . '/' . date('m') . '/';
-                $path = storage_path() . $dir;
+                $path = public_path() . $dir;
             }
             self::createFolder($path);
             $file = $img;

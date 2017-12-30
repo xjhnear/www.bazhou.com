@@ -1,9 +1,10 @@
 <?php
 return array(
     'debug'=>true,
-    //'template'=>'您好，验证码为12348【肯德基】',
-    'gateway'=>'http://open.youxiduo.com:8080/module_sms/service',
-    'template'=>'【游戏多】您的验证码为{code}，在30分钟内有效。',
-    'template_duoyou'=>'【多游】您的验证码为{code}，在30分钟内有效。',
-    'secret'=>'1234',
+    'gateway'=>'http://TSC2.800CT.COM:9006/sms/v2/std/single_send',
+//    'template'=>'【金麟网络】您的验证码为{code}，在30分钟内有效。',
+    'template'=>'同事您好，感谢您对此次测试的配合。{code}',
+    'userid'=>'JC2135',
+    'pwd'=>'236158',
+    'key'=>'00000000',
 );
