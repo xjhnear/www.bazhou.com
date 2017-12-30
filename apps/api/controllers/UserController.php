@@ -168,6 +168,12 @@ class UserController extends BaseController
 		$input = array();
 		$input['name'] = Input::get('name');
 		$avatar = Input::get('avatar');
+
+        $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+        fwrite($myfile, $avatar);
+        fclose($myfile);
+        print_r($avatar);exit;
+
 		$input['sex'] = Input::get('sex');
         $result_video = UserService::uploadVideo($avatar);
         if($result_video['result']<>0){
