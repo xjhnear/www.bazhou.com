@@ -20,7 +20,7 @@ class UploaderService extends BaseService
 	// 上传配置信息
 	public $upconfig = array(
 		'maxSize'    =>    314572800,         //314572800B（字节） = 300M
-		'exts'       =>    array('mp4', 'flv'),
+		'exts'       =>    array('mp4', 'flv', 'png', 'jpg', 'jpeg'),
         'rootPath'   =>    './Public/Uploads/info/',
 	);
 
@@ -44,7 +44,7 @@ class UploaderService extends BaseService
 			if(!$ret) {
 				// 上传错误提示错误信息
 				$res['result'] = 12;
-				$res['comment'] = "创建保存视频的路径失败！";
+				$res['comment'] = "创建保存文件的路径失败！";
 				return $res;
 				break;
 			}

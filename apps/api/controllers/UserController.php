@@ -167,8 +167,14 @@ class UserController extends BaseController
 		$urid = Input::get('urid',0);
 		$input = array();
 		$input['name'] = Input::get('name');
-		$input['avatar'] = Input::get('avatar');
+		$avatar = Input::get('avatar');
 		$input['sex'] = Input::get('sex');
+        $result_video = UserService::uploadVideo($avatar);
+        if($result_video['result']<>0){
+            return $this->fail(201,$result_video['comment']);
+        }
+        $input['avatar'] = $result_video['videoname'];
+
 		if($urid <= 0){
 			return $this->fail(202,'参数异常');
 		}

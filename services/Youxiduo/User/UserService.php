@@ -198,18 +198,18 @@ class UserService extends BaseService
 
 		if(($video_size > $upconfig['maxSize']) || ($video_size == 0)) {
 			$array['result'] = 13;
-			$array['comment'] = "视频大小不符合要求！";
+			$array['comment'] = "文件大小不符合要求！";
 			return $array;
 		}
 
 		if(!in_array($video_type,$upconfig['exts'])) {
 			$array['result'] = 14;
-			$array['comment'] = "视频格式不符合要求！";
+			$array['comment'] = "文件格式不符合要求！";
 			return $array;
 		}
 
 		// 设置附件上传子目录
-		$savePath = public_path().'/downloads/video/';
+		$savePath = public_path().'/downloads/info/';
 		$upload->upconfig['savePath'] = $savePath;
 
 		//视频保存的名称
