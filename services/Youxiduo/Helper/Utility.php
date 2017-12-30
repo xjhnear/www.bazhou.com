@@ -604,7 +604,6 @@ class Utility
     }
 
     public static function request_post($url = '', $param = '') {
-        print_r($param);exit;
         if (empty($url) || empty($param)) {
             return false;
         }
