@@ -53,22 +53,32 @@
       <file leaf-file-name="Utility.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/services/Youxiduo/Helper/Utility.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="622" column="18" lean-forward="false" selection-start-line="622" selection-start-column="18" selection-end-line="622" selection-end-column="18" />
+            <state relative-caret-position="405">
+              <caret line="612" column="21" lean-forward="true" selection-start-line="612" selection-start-column="21" selection-end-line="612" selection-end-column="21" />
               <folding>
-                <marker date="1514647522394" expanded="true" signature="29785:29801" ph="..." />
-                <marker date="1514647522394" expanded="true" signature="30062:30719" ph="..." />
-                <marker date="1514647522394" expanded="true" signature="30816:30822" ph=" " />
-                <marker date="1514647522394" expanded="true" signature="30822:30828" ph=" " />
-                <marker date="1514647522394" expanded="true" signature="32251:32267" ph="..." />
-                <marker date="1514647522394" expanded="true" signature="32497:34472" ph="..." />
-                <marker date="1514647522394" expanded="true" signature="32507:34038" ph="..." />
-                <marker date="1514647522394" expanded="true" signature="32566:34027" ph="..." />
-                <marker date="1514647522394" expanded="true" signature="34048:34461" ph="..." />
-                <marker date="1514647522394" expanded="true" signature="34068:34374" ph="..." />
-                <marker date="1514647522394" expanded="false" signature="34104:34139" ph="..." />
-                <marker date="1514647522394" expanded="true" signature="34196:34316" ph="..." />
+                <marker date="1514647575710" expanded="true" signature="29770:29786" ph="..." />
+                <marker date="1514647575710" expanded="true" signature="30047:30704" ph="..." />
+                <marker date="1514647575710" expanded="true" signature="30801:30807" ph=" " />
+                <marker date="1514647575710" expanded="true" signature="30807:30813" ph=" " />
+                <marker date="1514647575710" expanded="true" signature="32236:32252" ph="..." />
+                <marker date="1514647575710" expanded="true" signature="32482:34457" ph="..." />
+                <marker date="1514647575710" expanded="true" signature="32492:34023" ph="..." />
+                <marker date="1514647575710" expanded="true" signature="32551:34012" ph="..." />
+                <marker date="1514647575710" expanded="true" signature="34033:34446" ph="..." />
+                <marker date="1514647575710" expanded="true" signature="34053:34359" ph="..." />
+                <marker date="1514647575710" expanded="false" signature="34089:34124" ph="..." />
+                <marker date="1514647575710" expanded="true" signature="34181:34301" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="global.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/api/start/global.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="85" column="3" lean-forward="true" selection-start-line="85" selection-start-column="3" selection-end-line="85" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -154,11 +164,11 @@
         <option value="$PROJECT_DIR$/apps/admin/modules/user/views/user_video.twig" />
         <option value="$PROJECT_DIR$/apps/admin/modules/user/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/services/Youxiduo/User/UploaderService.php" />
-        <option value="$PROJECT_DIR$/apps/api/start/global.php" />
         <option value="$PROJECT_DIR$/apps/api/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/services/Youxiduo/User/UserService.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/services/Youxiduo/Helper/Utility.php" />
+        <option value="$PROJECT_DIR$/apps/api/start/global.php" />
       </list>
     </option>
   </component>
@@ -391,12 +401,12 @@
       <option name="presentableId" value="Default" />
       <updated>1505115690505</updated>
       <workItem from="1514108643233" duration="29000" />
-      <workItem from="1514602083325" duration="31253000" />
+      <workItem from="1514602083325" duration="31315000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31282000" />
+    <option name="totallyTimeSpent" value="31344000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -836,14 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/api/start/global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/api/controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
@@ -884,23 +886,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/apps/api/start/global.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="85" column="3" lean-forward="true" selection-start-line="85" selection-start-column="3" selection-end-line="85" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/services/Youxiduo/Helper/Utility.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="622" column="18" lean-forward="false" selection-start-line="622" selection-start-column="18" selection-end-line="622" selection-end-column="18" />
+        <state relative-caret-position="405">
+          <caret line="612" column="21" lean-forward="true" selection-start-line="612" selection-start-column="21" selection-end-line="612" selection-end-column="21" />
           <folding>
-            <marker date="1514647522394" expanded="true" signature="29785:29801" ph="..." />
-            <marker date="1514647522394" expanded="true" signature="30062:30719" ph="..." />
-            <marker date="1514647522394" expanded="true" signature="30816:30822" ph=" " />
-            <marker date="1514647522394" expanded="true" signature="30822:30828" ph=" " />
-            <marker date="1514647522394" expanded="true" signature="32251:32267" ph="..." />
-            <marker date="1514647522394" expanded="true" signature="32497:34472" ph="..." />
-            <marker date="1514647522394" expanded="true" signature="32507:34038" ph="..." />
-            <marker date="1514647522394" expanded="true" signature="32566:34027" ph="..." />
-            <marker date="1514647522394" expanded="true" signature="34048:34461" ph="..." />
-            <marker date="1514647522394" expanded="true" signature="34068:34374" ph="..." />
-            <marker date="1514647522394" expanded="false" signature="34104:34139" ph="..." />
-            <marker date="1514647522394" expanded="true" signature="34196:34316" ph="..." />
+            <marker date="1514647575710" expanded="true" signature="29770:29786" ph="..." />
+            <marker date="1514647575710" expanded="true" signature="30047:30704" ph="..." />
+            <marker date="1514647575710" expanded="true" signature="30801:30807" ph=" " />
+            <marker date="1514647575710" expanded="true" signature="30807:30813" ph=" " />
+            <marker date="1514647575710" expanded="true" signature="32236:32252" ph="..." />
+            <marker date="1514647575710" expanded="true" signature="32482:34457" ph="..." />
+            <marker date="1514647575710" expanded="true" signature="32492:34023" ph="..." />
+            <marker date="1514647575710" expanded="true" signature="32551:34012" ph="..." />
+            <marker date="1514647575710" expanded="true" signature="34033:34446" ph="..." />
+            <marker date="1514647575710" expanded="true" signature="34053:34359" ph="..." />
+            <marker date="1514647575710" expanded="false" signature="34089:34124" ph="..." />
+            <marker date="1514647575710" expanded="true" signature="34181:34301" ph="..." />
           </folding>
         </state>
       </provider>

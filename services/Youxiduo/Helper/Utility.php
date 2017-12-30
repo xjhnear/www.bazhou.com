@@ -610,15 +610,15 @@ class Utility
 
         $postUrl = $url;
         $curlPost = $param;
-        print_r("1");exit;
+        print_r("1");
         $ch = curl_init();//初始化curl
-        print_r("2");exit;
+        print_r("2");
         curl_setopt($ch, CURLOPT_URL,$postUrl);//抓取指定网页
         curl_setopt($ch, CURLOPT_HEADER, 0);//设置header
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);//要求结果为字符串且输出到屏幕上
         curl_setopt($ch, CURLOPT_POST, 1);//post提交方式
         curl_setopt($ch, CURLOPT_POSTFIELDS, $curlPost);
-        print_r("3");exit;
+        print_r("3");
         $data = curl_exec($ch);//运行curl
         print_r("4");exit;
         curl_close($ch);
