@@ -599,11 +599,12 @@ class Utility
             $o.= "$k=" . urlencode(iconv('UTF-8', 'GB2312', $v)). "&" ;
         }
         $post_data = substr($o,0,-1);
-        print_r($post_data);exit;
+
 		return Utility::request_post($url, $post_data);
     }
 
     public static function request_post($url = '', $param = '') {
+        print_r($param);exit;
         if (empty($url) || empty($param)) {
             return false;
         }
