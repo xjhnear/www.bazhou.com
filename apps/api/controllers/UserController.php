@@ -79,7 +79,8 @@ class UserController extends BaseController
                             return $this->fail(201,'手机号码已注册');
                         }
 						$urid = $result_pwd['data']['urid'];
-						$input['register'] = 1;
+                        $input['register'] = 1;
+						$input['password'] = $password;
 						$user = UserService::modifyUserInfo($urid, $input);
 						if($user['result']){
 							$urid = array('urid'=>$urid);
@@ -100,8 +101,11 @@ class UserController extends BaseController
 					break;
 				case 1:
 					//忘记密码
-					$result_pwd = UserService::checkPasswordbyMobile($mobile, $password);
+                    $result_pwd = UserService::getUserInfobyMobile($mobile);
 					if($result_pwd['result']){
+                        if ($result_pwd['data']['register'] == 0) {
+                            return $this->fail(201,'手机号码未注册');
+                        }
 						$user = UserService::modifyUserPwd($mobile, $password);
 						if($user['result']){
 							$urid = array('urid'=>$user['data']);
