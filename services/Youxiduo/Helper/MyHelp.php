@@ -220,7 +220,7 @@ class MyHelp
         return $titlePic;
     }
 
-    public static function save_img_no_url($img,$dir_='user'){
+    public static function save_img_no_url($img,$dir_='user',$mine){
         $titlePic ="";
         if($img) {
             if (!isset($dir)) {
@@ -230,7 +230,9 @@ class MyHelp
             self::createFolder($path);
             $file = $img;
             $new_filename = date('YmdHis') . str_random(4);
-            $mime = $file->getClientOriginalExtension();
+            if (!$mine) {
+                $mime = $file->getClientOriginalExtension();
+            }
             $file->move($path, $new_filename . '.' . $mime);
             $titlePic = $dir . $new_filename . '.' . $mime;
             //$titlePic = Utility::getImageUrl($titlePic);

@@ -234,7 +234,7 @@ class UserController extends BaseController
 			return $this->fail(202,'参数异常');
 		}
         if(Input::hasFile('video')){
-            $video = MyHelp::save_img_no_url(Input::file('video'),'video');
+            $video = MyHelp::save_img_no_url(Input::file('video'),'video','mp4');
         }
 		$input['numbers'] = $numbers;
 		$input['video'] = $video;
