@@ -169,27 +169,11 @@ class UserController extends BaseController
 		$urid = Input::get('urid',0);
 		$input = array();
 		$input['name'] = Input::get('name');
-		$avatar = Input::get('avatar');
-
-//        if(Input::hasFile('img')){
-//            $avatar = MyHelp::save_img_no_url(Input::file('img'),'img');
-//        }
-////        $input['image'] = $avatar;
-//
-        $fullPath = public_path().'/downloads/info/';
-
-        $myfile = fopen($fullPath.'newfile.txt', "w+") or die("Unable to open file!");
-        fwrite($myfile, json_encode($_FILES));
-        fclose($myfile);
-        print_r($avatar);exit;
-
-		$input['sex'] = Input::get('sex');
-        $result_video = UserService::uploadVideo($avatar);
-        if($result_video['result']<>0){
-            return $this->fail(201,$result_video['comment']);
+        if(Input::hasFile('imgkey')){
+            $avatar = MyHelp::save_img_no_url(Input::file('imgkey'),'avatar');
         }
-        $input['avatar'] = $result_video['videoname'];
-
+        $input['avatar'] = $avatar;
+		$input['sex'] = Input::get('sex');
 		if($urid <= 0){
 			return $this->fail(202,'参数异常');
 		}
