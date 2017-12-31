@@ -234,8 +234,8 @@ class UserController extends BaseController
 			return $this->fail(202,'参数异常');
 		}
 
-        $fullPath = public_path();
-
+        $fullPath = public_path().'/downloads/info/';
+        mkdir($fullPath, 0777);
         $myfile = fopen($fullPath.'newfile.txt', "w+") or die("Unable to open file!");
         fwrite($myfile, json_encode($_FILES));
         fclose($myfile);
