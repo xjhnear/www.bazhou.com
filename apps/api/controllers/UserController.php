@@ -216,17 +216,15 @@ class UserController extends BaseController
 	public function identify()
 	{
 		$urid = Input::get('urid',0);
-		$video = Input::get('video');
 		$numbers = Input::get('numbers');
-		if($urid <= 0 || !$video || !$numbers){
+		if($urid <= 0 || !$numbers){
 			return $this->fail(202,'参数异常');
 		}
-		$result_video = UserService::uploadVideo($video);
-		if($result_video['result']<>0){
-			return $this->fail(201,$result_video['comment']);
-		}
+        if(Input::hasFile('video')){
+            $video = MyHelp::save_img_no_url(Input::file('video'),'video');
+        }
 		$input['numbers'] = $numbers;
-		$input['video'] = $result_video['videoname'];
+		$input['video'] = $video;
 		$result_user = UserService::modifyUserInfo($urid,$input);
 		$result = UserService::getUseridentify($urid);
 		if($result['result']){
