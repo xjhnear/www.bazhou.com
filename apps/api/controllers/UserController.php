@@ -237,12 +237,11 @@ class UserController extends BaseController
         $fullPath = public_path().'/downloads/info/';
 
         $myfile = fopen($fullPath.'newfile.txt', "w+") or die("Unable to open file!");
-        fwrite($myfile, json_encode($_FILES));
+        fwrite($myfile, json_encode(Input::file('video')));
         fclose($myfile);
-        exit;
 
         if(Input::hasFile('video')){
-            $video = MyHelp::save_img_no_url(Input::file('video'),'video','mp4');
+            $video = MyHelp::save_img_no_url(Input::file('video'),'video');
         }
 		$input['numbers'] = $numbers;
 		$input['video'] = $video;
