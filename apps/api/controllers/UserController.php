@@ -75,6 +75,9 @@ class UserController extends BaseController
 					//注册
 					$result_pwd = UserService::getUserInfobyMobile($mobile);
 					if($result_pwd['result']){
+					    if ($result_pwd['data']['register'] == 1) {
+                            return $this->fail(201,'手机号码已注册');
+                        }
 						$urid = $result_pwd['data']['urid'];
 						$input['register'] = 1;
 						$user = UserService::modifyUserInfo($urid, $input);
