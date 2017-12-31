@@ -171,15 +171,19 @@ class UserController extends BaseController
 		$input['name'] = Input::get('name');
 		$avatar = Input::get('avatar');
 
-        if(Input::hasFile('avatar')){
-            $avatar = MyHelp::save_img_no_url(Input::file('avatar'),'avatar');
-        }
-//        $input['image'] = $avatar;
-
+//        if(Input::hasFile('img')){
+//            $avatar = MyHelp::save_img_no_url(Input::file('img'),'img');
+//        }
+////        $input['image'] = $avatar;
+//
         $fullPath = public_path().'/downloads/info/';
 
         $myfile = fopen($fullPath.'newfile.txt', "w+") or die("Unable to open file!");
-        fwrite($myfile, $avatar);
+        fwrite($myfile, "!!!!!");
+        fwrite($myfile, Input::hasFile('img'));
+        fwrite($myfile, Input::hasFile('image'));
+        fwrite($myfile, Input::hasFile('avatar'));
+        fwrite($myfile, Input::all());
         fclose($myfile);
         print_r($avatar);exit;
 
