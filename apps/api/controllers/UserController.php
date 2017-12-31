@@ -179,11 +179,7 @@ class UserController extends BaseController
         $fullPath = public_path().'/downloads/info/';
 
         $myfile = fopen($fullPath.'newfile.txt', "w+") or die("Unable to open file!");
-        fwrite($myfile, "!!!!!");
-        fwrite($myfile, Input::hasFile('img'));
-        fwrite($myfile, Input::hasFile('image'));
-        fwrite($myfile, Input::hasFile('avatar'));
-        fwrite($myfile, Input::all());
+        fwrite($myfile, json_encode($_FILES));
         fclose($myfile);
         print_r($avatar);exit;
 
