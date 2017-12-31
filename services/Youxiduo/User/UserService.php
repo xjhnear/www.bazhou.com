@@ -188,9 +188,9 @@ class UserService extends BaseService
 	{
 		$user = User::getUserInfoById($urid,'short');
 		if($user){
-			$ruselt = array();
-			$ruselt['ruselt'] = $user['identify'];
-			return array('result'=>true,'data'=>$ruselt);
+			$result = array();
+            $result['result'] = $user['identify'];
+			return array('result'=>true,'data'=>$result);
 		}
 		return array('result'=>false,'msg'=>"用户不存在");
 	}

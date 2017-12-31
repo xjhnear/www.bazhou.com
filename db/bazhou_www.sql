@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50720
 File Encoding         : 65001
 
-Date: 2017-12-31 15:58:09
+Date: 2017-12-31 19:48:37
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -120,7 +120,7 @@ CREATE TABLE `m_user` (
   `identify` int(11) DEFAULT '0' COMMENT '认证状态 0-未认证 1-认证成功 2-审核中',
   `register` int(11) DEFAULT '0' COMMENT '是否注册',
   `udid` varchar(200) NOT NULL DEFAULT '' COMMENT '设备号',
-  `numbers` int(11) DEFAULT NULL,
+  `numbers` varchar(20) DEFAULT NULL,
   `video` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`urid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
@@ -128,8 +128,8 @@ CREATE TABLE `m_user` (
 -- ----------------------------
 -- Records of m_user
 -- ----------------------------
-INSERT INTO `m_user` VALUES ('17', '13917438216', 'E10ADC3949BA59ABBE56E057F20F883E', '小胖', '/userdirs/avatar/2017/12/201712311541427O4k.jpg', '1', '夏佳辉', '1', '上海市浦东新区凌兆路711弄11号303室', '310102198803111239', '/userdirs/head_img/2017/12/20171231155328hVqf.jpg', '1514276705', '1514706808', '0', '1', '', null, null);
-INSERT INTO `m_user` VALUES ('18', '13661691226', null, '', null, '1', '豆中旭', '1', 'aaa', '412728198801297510', '/userdirs/head_img/2017/12/20171231155745ueyJ.jpg', '1514707065', '1514707065', '0', '0', '', null, null);
+INSERT INTO `m_user` VALUES ('17', '13917438216', '96E79218965EB72C92A549DD5A330112', '小胖', '/userdirs/avatar/2017/12/201712311541427O4k.jpg', '1', '夏佳辉', '1', '上海市浦东新区凌兆路711弄11号303室', '310102198803111239', '/userdirs/head_img/2017/12/20171231155745ueyJ.jpg', '1514276705', '1514709942', '0', '1', '', '92,70,52,29', '/userdirs/video/2017/12/20171231193346ZECt.mp4');
+INSERT INTO `m_user` VALUES ('18', '13661691226', 'E10ADC3949BA59ABBE56E057F20F883E', '好', '/userdirs/avatar/2017/12/20171231164851lZII.jpg', '1', '豆中旭', '1', 'aaa', '412728198801297510', '/userdirs/head_img/2017/12/20171231155745ueyJ.jpg', '1514707065', '1514707065', '0', '1', '', null, null);
 
 -- ----------------------------
 -- Table structure for `m_user_mobile`
@@ -152,6 +152,6 @@ CREATE TABLE `m_user_mobile` (
 -- ----------------------------
 -- Records of m_user_mobile
 -- ----------------------------
-INSERT INTO `m_user_mobile` VALUES ('1', '13917438216', '1514273548', '1514648122', '1', '2', '734630', '1514649905', '0', '0');
-INSERT INTO `m_user_mobile` VALUES ('2', '13661691226', '1514706519', '1514706541', '1', '0', '332771', '1514708319', '0', '0');
+INSERT INTO `m_user_mobile` VALUES ('1', '13917438216', '1514273548', '1514709384', '1', '1', '467624', '1514711165', '0', '0');
+INSERT INTO `m_user_mobile` VALUES ('2', '13661691226', '1514706519', '1514709445', '1', '1', '649526', '1514711234', '0', '0');
 INSERT INTO `m_user_mobile` VALUES ('3', '13661691229', '1514707015', '1514707015', '0', '0', '421270', '0', '1514707015', '4');
