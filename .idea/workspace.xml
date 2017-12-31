@@ -43,11 +43,9 @@
       <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/api/controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#37#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="133">
+              <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -97,6 +95,8 @@
       <find>gameListPicture</find>
       <find>Server Error</find>
       <find>MyHelp</find>
+      <find>imageUpload</find>
+      <find>ImageHelper</find>
     </findStrings>
     <dirStrings>
       <dir>D:\wamp64\www\www.bazhou.com</dir>
@@ -420,12 +420,12 @@
       <option name="presentableId" value="Default" />
       <updated>1505115690505</updated>
       <workItem from="1514108643233" duration="29000" />
-      <workItem from="1514602083325" duration="37302000" />
+      <workItem from="1514602083325" duration="37358000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37331000" />
+    <option name="totallyTimeSpent" value="37387000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -908,7 +908,7 @@
         <state relative-caret-position="-3363">
           <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding>
-            <element signature="e#43#80#0#PHP" expanded="true" />
+            <element signature="e#43#80#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -931,11 +931,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/api/controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#37#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="133">
+          <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>

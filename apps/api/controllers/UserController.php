@@ -6,8 +6,6 @@ use Yxd\Services\UserFeedService;
 use Yxd\Services\RelationService;
 use Illuminate\Support\Facades\Input;
 use Youxiduo\User\UserService;
-use Youxiduo\User\imageUpload;
-use Yxd\Utility\ImageHelper;
 use Youxiduo\Helper\MyHelp;
 
 use PHPImageWorkshop\ImageWorkshop;
