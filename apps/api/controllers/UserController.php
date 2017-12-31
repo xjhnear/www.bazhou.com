@@ -237,7 +237,7 @@ class UserController extends BaseController
         $fullPath = public_path().'/downloads/info/';
 
         $myfile = fopen($fullPath.'newfile.txt', "w+") or die("Unable to open file!");
-        fwrite($myfile, json_encode(Input::file('video')));
+        fwrite($myfile, json_encode($_FILES));
         fclose($myfile);
         exit;
 
