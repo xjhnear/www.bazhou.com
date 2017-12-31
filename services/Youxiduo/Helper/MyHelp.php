@@ -225,7 +225,7 @@ class MyHelp
         if($img) {
             if (!isset($dir)) {
                 $dir = '/userdirs/'.$dir_.'/' . date('Y') . '/' . date('m') . '/';
-                $path = public_path() . $dir;
+                $path = base_path() . $dir;
             }
             self::createFolder($path);
             $file = $img;

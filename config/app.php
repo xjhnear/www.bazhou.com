@@ -18,7 +18,7 @@ return array(
     'firephp'=>true,
     'close_cache' => true,
     'close_redis_user'=>true,
-    'api'=>'http://open.youxiduo.com',
+    'api'=>'http://47.100.101.44:6060',
     'domain'=>'youxiduo.com',
     'urlsecret'=>'ABCD1234YOUXIDUO',
     'urlsecret_311'=>'youxiduo$jk@55293',
