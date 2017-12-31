@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Input;
 use Youxiduo\User\UserService;
 use Youxiduo\User\imageUpload;
 use Yxd\Utility\ImageHelper;
+use Youxiduo\Helper\MyHelp;
 
 use PHPImageWorkshop\ImageWorkshop;
 
@@ -170,14 +171,12 @@ class UserController extends BaseController
 		$input['name'] = Input::get('name');
 		$avatar = Input::get('avatar');
 
+        if(Input::hasFile('image')){
+            $avatar = MyHelp::save_img_no_url(Input::file('image'),'image');
+        }
+//        $input['image'] = $avatar;
 
         $fullPath = public_path().'/downloads/info/';
-        if(!file_exists($fullPath)){
-            $ret = mkdir($fullPath, 0777, true);
-        }
-
-        $imageUpload = new imageUpload('new.png', $fullPath);
-        $avatar = $imageUpload->image_name;
 
         $myfile = fopen($fullPath.'newfile.txt', "w+") or die("Unable to open file!");
         fwrite($myfile, $avatar);
