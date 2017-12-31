@@ -233,6 +233,7 @@ class UserController extends BaseController
 		if($urid <= 0 || !$numbers){
 			return $this->fail(202,'参数异常');
 		}
+		print_r($_FILES);exit;
         if(Input::hasFile('video')){
             $video = MyHelp::save_img_no_url(Input::file('video'),'video','mp4');
         }
