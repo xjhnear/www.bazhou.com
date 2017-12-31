@@ -146,6 +146,18 @@ class UserService extends BaseService
 		}
 		return array('result'=>false,'msg'=>"用户不存在");
 	}
+
+    public static function getUserInfobyMobile($mobile)
+    {
+        $user = User::getUserInfoByMobile($mobile);
+        if($user){
+//			if($user['mobile']){
+//				$user['mobile'] = preg_replace('/(1[3578]{1}[0-9])[0-9]{4}([0-9]{4})/i','$1****$2',$user['mobile']);
+//			}
+            return array('result'=>true,'data'=>$user);
+        }
+        return array('result'=>false,'msg'=>"用户不存在");
+    }
 	/**
 	 * 修改用户资料
 	 */

@@ -73,7 +73,7 @@ class UserController extends BaseController
 			switch ($type) {
 				case 0:
 					//注册
-					$result_pwd = UserService::checkPasswordbyMobile($mobile, $password, 0);
+					$result_pwd = UserService::getUserInfobyMobile($mobile);
 					if($result_pwd['result']){
 						$urid = $result_pwd['data']['urid'];
 						$input['register'] = 1;

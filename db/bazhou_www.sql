@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : localhost
-Source Server Version : 50714
-Source Host           : localhost:3306
+Source Server         : 47.100.101.44
+Source Server Version : 50720
+Source Host           : 47.100.101.44:3306
 Source Database       : bazhou_www
 
 Target Server Type    : MYSQL
-Target Server Version : 50714
+Target Server Version : 50720
 File Encoding         : 65001
 
-Date: 2017-12-30 22:00:25
+Date: 2017-12-31 15:58:09
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -100,59 +100,16 @@ CREATE TABLE `m_feedback` (
 INSERT INTO `m_feedback` VALUES ('1', '17', '1111', '222', '1514281237', '1514281237');
 
 -- ----------------------------
--- Table structure for `m_phone_batch`
--- ----------------------------
-DROP TABLE IF EXISTS `m_phone_batch`;
-CREATE TABLE `m_phone_batch` (
-  `batch_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '批次ID',
-  `batch_code` varchar(50) NOT NULL DEFAULT '' COMMENT '批次Code',
-  `count` int(11) NOT NULL DEFAULT '0' COMMENT '数据量',
-  `coefficient` varchar(50) NOT NULL DEFAULT '' COMMENT '系数',
-  `created_at` int(11) unsigned NOT NULL COMMENT '创建时间',
-  `updated_at` int(11) unsigned NOT NULL COMMENT '修改时间',
-  `down_at` int(11) unsigned DEFAULT NULL COMMENT '导出时间',
-  `is_new` int(6) NOT NULL DEFAULT '1' COMMENT '是否新批次',
-  PRIMARY KEY (`batch_id`),
-  UNIQUE KEY `index_batch_code` (`batch_code`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- ----------------------------
--- Records of m_phone_batch
--- ----------------------------
-
--- ----------------------------
--- Table structure for `m_phone_numbers`
--- ----------------------------
-DROP TABLE IF EXISTS `m_phone_numbers`;
-CREATE TABLE `m_phone_numbers` (
-  `num_id` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '手机号ID',
-  `batch_id` int(11) NOT NULL DEFAULT '0' COMMENT '批次ID',
-  `phone_number` varchar(20) NOT NULL DEFAULT '' COMMENT '手机号码',
-  `operator` varchar(20) NOT NULL DEFAULT '' COMMENT '运营商',
-  `city` varchar(20) NOT NULL DEFAULT '' COMMENT '城市',
-  `address` varchar(200) NOT NULL DEFAULT '' COMMENT '地址',
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
-  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
-  PRIMARY KEY (`num_id`),
-  UNIQUE KEY `index_phone_number` (`phone_number`) USING BTREE,
-  KEY `index_batch_id` (`batch_id`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- ----------------------------
--- Records of m_phone_numbers
--- ----------------------------
-
--- ----------------------------
 -- Table structure for `m_user`
 -- ----------------------------
 DROP TABLE IF EXISTS `m_user`;
 CREATE TABLE `m_user` (
   `urid` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户ID',
   `mobile` varchar(20) NOT NULL DEFAULT '' COMMENT '手机号码',
-  `password` varchar(40) CHARACTER SET utf8 NOT NULL COMMENT '密码',
-  `name` varchar(50) NOT NULL DEFAULT '' COMMENT '姓名',
+  `password` varchar(40) CHARACTER SET utf8 DEFAULT NULL COMMENT '密码',
+  `name` varchar(50) DEFAULT '' COMMENT '姓名',
   `avatar` varchar(255) DEFAULT NULL COMMENT '头像',
-  `sex` int(11) NOT NULL DEFAULT '1' COMMENT '性别 1-male 2-female',
+  `sex` int(11) DEFAULT '1' COMMENT '性别 1-male 2-female',
   `card_name` varchar(50) DEFAULT NULL COMMENT '证件姓名',
   `card_sex` int(11) NOT NULL DEFAULT '1' COMMENT '证件性别 1-male 2-female',
   `card_address` varchar(200) NOT NULL DEFAULT '' COMMENT '证件地址',
@@ -166,13 +123,13 @@ CREATE TABLE `m_user` (
   `numbers` int(11) DEFAULT NULL,
   `video` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`urid`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of m_user
 -- ----------------------------
-INSERT INTO `m_user` VALUES ('1', '123', '202cb962ac59075b964b07152d234b70', '', null, '1', null, '1', '', '', '', '11', '11', '0', '0', '', null, null);
-INSERT INTO `m_user` VALUES ('17', '13917438216', 'e10adc3949ba59abbe56e057f20f883e', '12311', null, '1', '', '1', '111', '222', '/userdirs/head_img/2017/12/20171230162355nmBs.jps', '1514276705', '1514622533', '0', '1', '', null, null);
+INSERT INTO `m_user` VALUES ('17', '13917438216', 'E10ADC3949BA59ABBE56E057F20F883E', '小胖', '/userdirs/avatar/2017/12/201712311541427O4k.jpg', '1', '夏佳辉', '1', '上海市浦东新区凌兆路711弄11号303室', '310102198803111239', '/userdirs/head_img/2017/12/20171231155328hVqf.jpg', '1514276705', '1514706808', '0', '1', '', null, null);
+INSERT INTO `m_user` VALUES ('18', '13661691226', null, '', null, '1', '豆中旭', '1', 'aaa', '412728198801297510', '/userdirs/head_img/2017/12/20171231155745ueyJ.jpg', '1514707065', '1514707065', '0', '0', '', null, null);
 
 -- ----------------------------
 -- Table structure for `m_user_mobile`
@@ -190,9 +147,11 @@ CREATE TABLE `m_user_mobile` (
   `last_sendtime` int(11) DEFAULT NULL,
   `error_num` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of m_user_mobile
 -- ----------------------------
-INSERT INTO `m_user_mobile` VALUES ('1', '13917438216', '1514273548', '1514614175', '1', '0', '960621', '1514615975', '1514614175', '0');
+INSERT INTO `m_user_mobile` VALUES ('1', '13917438216', '1514273548', '1514648122', '1', '2', '734630', '1514649905', '0', '0');
+INSERT INTO `m_user_mobile` VALUES ('2', '13661691226', '1514706519', '1514706541', '1', '0', '332771', '1514708319', '0', '0');
+INSERT INTO `m_user_mobile` VALUES ('3', '13661691229', '1514707015', '1514707015', '0', '0', '421270', '0', '1514707015', '4');

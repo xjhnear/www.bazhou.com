@@ -123,6 +123,15 @@ final class User extends Model implements IModel
 		return self::filterUserFields($info,$filter);
 	}
 
+    public static function getUserInfoByMobile($mobile,$filter='info')
+    {
+        $info = self::db()->where('mobile','=',$mobile)->first();
+        if(!$info) return null;
+//		$info && $info['avatar'] = Utility::getImageUrl($info['avatar']);
+//		$info && $info['homebg'] = Utility::getImageUrl($info['homebg']);
+        return self::filterUserFields($info,$filter);
+    }
+
 	/**
 	 * 过滤用户隐私信息
 	 * @param array $user 用户信息
@@ -169,7 +178,7 @@ final class User extends Model implements IModel
 	public static function getList($search,$pageIndex=1,$pageSize=20)
 	{
 		$tb = self::db();
-		if(isset($search['name']) && !empty($search['name'])) $tb = $tb->where('name','like','%'.$search['name'].'%');
+		if(isset($search['name']) && !empty($search['name'])) $tb = $tb->where('card_name','like','%'.$search['name'].'%');
 		if(isset($search['mobile']) && !empty($search['mobile'])) $tb = $tb->where('mobile','=',$search['mobile']);
 		return $tb->orderBy('created_at','desc')->forPage($pageIndex,$pageSize)->get();
 	}
@@ -177,7 +186,7 @@ final class User extends Model implements IModel
 	public static function getCount($search)
 	{
 		$tb = self::db();
-		if(isset($search['name']) && !empty($search['name'])) $tb = $tb->where('name','like','%'.$search['name'].'%');
+		if(isset($search['name']) && !empty($search['name'])) $tb = $tb->where('card_name','like','%'.$search['name'].'%');
 		if(isset($search['mobile']) && !empty($search['mobile'])) $tb = $tb->where('mobile','=',$search['mobile']);
 		return $tb->count();
 	}
@@ -199,7 +208,7 @@ final class User extends Model implements IModel
 	{
 		$tb = self::db();
 		if(isset($search['name'])){
-			$tb = $tb->where('name','like','%'.$search['name'].'%');
+			$tb = $tb->where('card_name','like','%'.$search['name'].'%');
 		}
 		return $tb;
 	}
