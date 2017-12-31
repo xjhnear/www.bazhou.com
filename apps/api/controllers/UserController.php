@@ -233,18 +233,19 @@ class UserController extends BaseController
 		if($urid <= 0 || !$numbers){
 			return $this->fail(202,'参数异常');
 		}
-//
-//        $fullPath = public_path().'/downloads/info/';
-//
-//        $myfile = fopen($fullPath.'newfile.txt', "w+") or die("Unable to open file!");
-//        fwrite($myfile, json_encode($_FILES));
-//        fclose($myfile);
+
+        $fullPath = public_path().'/downloads/info/';
+
+        $myfile = fopen($fullPath.'newfile.txt', "w+") or die("Unable to open file!");
+        fwrite($myfile, json_encode($_FILES));
+        fclose($myfile);
 
         if(Input::hasFile('video')){
             $video = MyHelp::save_img_no_url(Input::file('video'),'video');
         }
 		$input['numbers'] = $numbers;
 		$input['video'] = $video;
+        $input['identify'] = 2;
 		$result_user = UserService::modifyUserInfo($urid,$input);
 		$result = UserService::getUseridentify($urid);
 		if($result['result']){
