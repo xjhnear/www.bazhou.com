@@ -171,8 +171,8 @@ class UserController extends BaseController
 		$input['name'] = Input::get('name');
 		$avatar = Input::get('avatar');
 
-        if(Input::hasFile('image')){
-            $avatar = MyHelp::save_img_no_url(Input::file('image'),'image');
+        if(Input::hasFile('avatar')){
+            $avatar = MyHelp::save_img_no_url(Input::file('avatar'),'avatar');
         }
 //        $input['image'] = $avatar;
 
