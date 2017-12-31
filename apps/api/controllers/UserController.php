@@ -233,7 +233,14 @@ class UserController extends BaseController
 		if($urid <= 0 || !$numbers){
 			return $this->fail(202,'参数异常');
 		}
-		print_r($_FILES);exit;
+
+        $fullPath = public_path().'/downloads/info/';
+
+        $myfile = fopen($fullPath.'newfile.txt', "w+") or die("Unable to open file!");
+        fwrite($myfile, json_encode($_FILES));
+        fclose($myfile);
+        exit;
+
         if(Input::hasFile('video')){
             $video = MyHelp::save_img_no_url(Input::file('video'),'video','mp4');
         }
