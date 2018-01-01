@@ -114,7 +114,7 @@ class UserController extends BaseController
 							return $this->fail(201,$user['msg']);
 						}
 					}else{
-						return $this->fail(201,'用户名密码错误');
+						return $this->fail(201,'手机号码错误');
 					}
 					break;
 				case 2:
