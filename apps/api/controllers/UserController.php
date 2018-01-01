@@ -121,7 +121,7 @@ class UserController extends BaseController
 					//更换绑定手机
 					$result_pwd = UserService::checkPassword($urid, $password);
 					if($result_pwd['result']){
-						$user = UserService::modifyUserMobile($urid, $password);
+						$user = UserService::modifyUserMobile($urid, $mobile);
 						if($user['result']){
 							$urid = array('urid'=>$user['data']);
 							return $this->success($urid);
@@ -182,8 +182,8 @@ class UserController extends BaseController
 		$input['name'] = Input::get('name');
         if(Input::hasFile('imgkey')){
             $avatar = MyHelp::save_img_no_url(Input::file('imgkey'),'avatar');
+            $input['avatar'] = $avatar;
         }
-        $input['avatar'] = $avatar;
 		$input['sex'] = Input::get('sex');
 		if($urid <= 0){
 			return $this->fail(202,'参数异常');

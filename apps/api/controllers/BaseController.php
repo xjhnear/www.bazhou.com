@@ -42,7 +42,7 @@ class BaseController extends Controller
 	public function success($data=array())
 	{
 		if(!is_array($data)) $data = array();
-		$result = array_merge(array('status'=>'200','message'=>''),$data);
+		$result = array_merge(array('status'=>'200','message'=>'成功'),$data);
 		array_walk_recursive($result,function(&$val,$key){
 		    if(!is_array($val)){
 		    	if(is_numeric($val)) $val = strval($val);

@@ -113,9 +113,9 @@ class UserService extends BaseService
 	 * 修改手机号
 	 *
 	 */
-	public static function modifyUserMobile($urid,$password)
+	public static function modifyUserMobile($urid,$mobile)
 	{
-		$res = User::modifyUserPwd($urid,User::IDENTIFY_FIELD_URID,$password);
+		$res = User::modifyUserMobile($urid,User::IDENTIFY_FIELD_URID,$mobile);
 		if($res){
 			return array('result'=>true,'data'=>$res);
 		}else{
