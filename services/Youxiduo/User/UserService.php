@@ -165,7 +165,7 @@ class UserService extends BaseService
 	{
 		if(!$urid) return false;
 
-		$fields = array('name','avatar','sex','identify','register','numbers','video');
+		$fields = array('name','avatar','sex','identify','register','numbers','video','password');
 		$data = array();
 		//过滤非法字段
 		foreach($fields as $field){
