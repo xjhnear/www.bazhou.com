@@ -171,6 +171,7 @@ class UserService extends BaseService
 		foreach($fields as $field){
 			isset($input[$field]) && !empty($input[$field]) && $data[$field] = $input[$field];
 		}
+        $data['updated_at'] = time();
 		if($data){
 			$res = User::modifyUserInfo($urid, $data);
 			if($res){
