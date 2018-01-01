@@ -30,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/api/controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="124" column="44" lean-forward="true" selection-start-line="124" selection-start-column="44" selection-end-line="124" selection-end-column="44" />
+            <state relative-caret-position="186">
+              <caret line="89" column="25" lean-forward="true" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
               <folding>
                 <element signature="e#6#37#0#PHP" expanded="true" />
               </folding>
@@ -42,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserService.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/services/Youxiduo/User/UserService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="115" column="43" lean-forward="false" selection-start-line="115" selection-start-column="27" selection-end-line="115" selection-end-column="43" />
+            <state relative-caret-position="281">
+              <caret line="82" column="5" lean-forward="true" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -55,8 +55,8 @@
       <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/Youxiduo/User/Model/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="100" column="77" lean-forward="false" selection-start-line="100" selection-start-column="70" selection-end-line="100" selection-end-column="77" />
+            <state relative-caret-position="186">
+              <caret line="64" column="44" lean-forward="false" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -104,6 +104,9 @@
       <find>getUserInfoById</find>
       <find>MyHelp</find>
       <find>ruselt</find>
+      <find>cryptPwd</find>
+      <find>modifyUserMobile</find>
+      <find>createUserByPhone</find>
     </findStrings>
     <dirStrings>
       <dir>D:\wamp64\www\www.bazhou.com</dir>
@@ -159,13 +162,13 @@
         <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/apps/admin/modules/user/views/user_list.twig" />
-        <option value="$PROJECT_DIR$/services/Youxiduo/User/Model/User.php" />
         <option value="$PROJECT_DIR$/apps/admin/modules/user/views/user_video.twig" />
         <option value="$PROJECT_DIR$/services/Youxiduo/Helper/MyHelp.php" />
         <option value="$PROJECT_DIR$/services/Youxiduo/User/UploaderService.php" />
         <option value="$PROJECT_DIR$/apps/api/controllers/BaseController.php" />
         <option value="$PROJECT_DIR$/services/Youxiduo/User/UserService.php" />
         <option value="$PROJECT_DIR$/apps/api/controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/services/Youxiduo/User/Model/User.php" />
       </list>
     </option>
   </component>
@@ -380,12 +383,12 @@
       <updated>1505115690505</updated>
       <workItem from="1514108643233" duration="29000" />
       <workItem from="1514602083325" duration="52634000" />
-      <workItem from="1514805551078" duration="969000" />
+      <workItem from="1514805551078" duration="1670000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53632000" />
+    <option name="totallyTimeSpent" value="54333000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -776,27 +779,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/services/Youxiduo/User/Model/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="100" column="77" lean-forward="false" selection-start-line="100" selection-start-column="70" selection-end-line="100" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/services/Youxiduo/User/UserService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="115" column="43" lean-forward="false" selection-start-line="115" selection-start-column="27" selection-end-line="115" selection-end-column="43" />
+        <state relative-caret-position="186">
+          <caret line="64" column="44" lean-forward="false" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/api/controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="124" column="44" lean-forward="true" selection-start-line="124" selection-start-column="44" selection-end-line="124" selection-end-column="44" />
+        <state relative-caret-position="186">
+          <caret line="89" column="25" lean-forward="true" selection-start-line="89" selection-start-column="25" selection-end-line="89" selection-end-column="25" />
           <folding>
             <element signature="e#6#37#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/Youxiduo/User/UserService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="82" column="5" lean-forward="true" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

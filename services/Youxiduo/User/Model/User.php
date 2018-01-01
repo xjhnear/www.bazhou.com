@@ -36,9 +36,9 @@ final class User extends Model implements IModel
 	public static function doLocalLogin($identify,$identify_field,$password,$register)
 	{
 		if(!in_array($identify_field,array('urid','mobile'))) return false;
-		if(strlen($password) != 32){
-			$password = Utility::cryptPwd($password);
-		}
+//		if(strlen($password) != 32){
+//			$password = Utility::cryptPwd($password);
+//		}
 		$user = self::db();
 		$user = $user->where($identify_field,'=',$identify)->where('password','=',$password);
 		if ($register==1) {
@@ -81,9 +81,9 @@ final class User extends Model implements IModel
 		if(!in_array($identify_field,array('mobile','urid'))) return false;
 		$user = self::getUserInfoByField($identify, $identify_field);
 		if($user){
-			if(strlen($password)!=32){
-				$password = Utility::cryptPwd($password);
-			}
+//			if(strlen($password)!=32){
+//				$password = Utility::cryptPwd($password);
+//			}
 			$res = self::db()->where($identify_field,'=',$identify)->update(array('password'=>$password));
 			return $user['urid'];
 		}
