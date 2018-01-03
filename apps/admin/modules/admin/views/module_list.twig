@@ -39,7 +39,7 @@
 						<td><!--{{item.module_desc}}--></td>
 						<td>
 							<a class="icon-edit pull-left" href="<!--{{url('admin/module/info',{'id':item.id})}}-->">查看</a>
-							<!--{%if item.module_type != 'core'%}-->
+							<!--{%if item.module_type != 'core' and 1!=1%}-->
 							<a class="icon-remove pull-right" href="<!--{{url('admin/module/uninstall',{'id':item.id})}}-->">卸载</a>
 							<!--{%endif%}-->
 						</td>
