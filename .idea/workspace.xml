@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b5859ff1-1d6d-4488-afaa-e4601347459e" name="默认的" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/admin/modules/admin/views/admin_list.twig" afterPath="$PROJECT_DIR$/apps/admin/modules/admin/views/admin_list.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/Youxiduo/System/Model/AuthGroup.php" afterPath="$PROJECT_DIR$/services/Youxiduo/System/Model/AuthGroup.php" />
     </list>
     <ignored path="mcp.me.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -110,8 +109,8 @@
       <file leaf-file-name="admin_list.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/admin/modules/admin/views/admin_list.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5608856">
-              <caret line="63" column="134" selection-start-line="63" selection-start-column="134" selection-end-line="63" selection-end-column="134" />
+            <state vertical-scroll-proportion="0.65436655">
+              <caret line="67" column="68" selection-start-line="67" selection-start-column="68" selection-end-line="67" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -1021,8 +1020,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/admin/modules/admin/views/admin_list.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5608856">
-          <caret line="63" column="134" selection-start-line="63" selection-start-column="134" selection-end-line="63" selection-end-column="134" />
+        <state vertical-scroll-proportion="0.65436655">
+          <caret line="67" column="68" selection-start-line="67" selection-start-column="68" selection-end-line="67" selection-end-column="68" />
           <folding />
         </state>
       </provider>
