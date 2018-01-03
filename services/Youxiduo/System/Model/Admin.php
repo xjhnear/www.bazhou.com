@@ -45,7 +45,7 @@ final class Admin extends Model implements IModel
 		if(isset($search['in_group_id']) && $search['in_group_id']) $tb = $tb->whereIn('group_id',$search['in_group_id']);
 		if(isset($search['username']) && !empty($search['username'])) $tb = $tb->where('username','like','%'.$search['username'].'%');
 		if(!isset($search['showall']) || empty($search['showall']) || $search['showall']==0) $tb = $tb->where('isopen','=',1);
-		return $tb->orderBy('id','desc')->forPage($pageIndex,$pageSize)->get();
+		return $tb->orderBy('id','asc')->forPage($pageIndex,$pageSize)->get();
 	}
 	
 	public static function getCount($search)

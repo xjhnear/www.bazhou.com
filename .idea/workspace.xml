@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5859ff1-1d6d-4488-afaa-e4601347459e" name="默认的" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/apps/admin/modules/admin/views/admin_list.twig" afterPath="$PROJECT_DIR$/apps/admin/modules/admin/views/admin_list.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/Youxiduo/System/Model/Admin.php" afterPath="$PROJECT_DIR$/services/Youxiduo/System/Model/Admin.php" />
     </list>
     <ignored path="mcp.me.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,18 +99,28 @@
       <file leaf-file-name="AdminController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/admin/modules/admin/controllers/AdminController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.142858">
-              <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+            <state vertical-scroll-proportion="-8.357142">
+              <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin_list.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin_list.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/admin/modules/admin/views/admin_list.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65436655">
-              <caret line="67" column="68" selection-start-line="67" selection-start-column="68" selection-end-line="67" selection-end-column="68" />
+            <state vertical-scroll-proportion="-9.5">
+              <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Admin.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/services/Youxiduo/System/Model/Admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.50799507">
+              <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -154,7 +164,6 @@
       <list>
         <option value="$PROJECT_DIR$/api/controllers/MobController.php" />
         <option value="$PROJECT_DIR$/apps/admin/modules/admin/controllers/GroupController.php" />
-        <option value="$PROJECT_DIR$/services/Youxiduo/System/Model/Admin.php" />
         <option value="$PROJECT_DIR$/services/Youxiduo/System/AuthService.php" />
         <option value="$PROJECT_DIR$/services/Youxiduo/System/Model/PhoneBatch.php" />
         <option value="$PROJECT_DIR$/apps/admin/modules/phone/config.php" />
@@ -203,6 +212,7 @@
         <option value="$PROJECT_DIR$/apps/admin/modules/admin/controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/services/Youxiduo/System/Model/AuthGroup.php" />
         <option value="$PROJECT_DIR$/apps/admin/modules/admin/views/admin_list.twig" />
+        <option value="$PROJECT_DIR$/services/Youxiduo/System/Model/Admin.php" />
       </list>
     </option>
   </component>
@@ -269,9 +279,9 @@
   </component>
   <component name="PhpXdebugProxy" ide_key="phpStorm" host="localhost" port="80" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="514" />
+    <option name="x" value="366" />
     <option name="y" value="66" />
-    <option name="width" value="1400" />
+    <option name="width" value="1548" />
     <option name="height" value="979" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -573,7 +583,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="514" y="66" width="1400" height="979" extended-state="0" />
+    <frame x="366" y="66" width="1548" height="979" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1010,18 +1020,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/admin/modules/admin/controllers/AdminController.php">
+    <entry file="file://$PROJECT_DIR$/apps/admin/modules/admin/views/admin_list.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.142858">
-          <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
+        <state vertical-scroll-proportion="-9.5">
+          <caret line="53" column="51" selection-start-line="53" selection-start-column="51" selection-end-line="53" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/admin/modules/admin/views/admin_list.twig">
+    <entry file="file://$PROJECT_DIR$/apps/admin/modules/admin/controllers/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65436655">
-          <caret line="67" column="68" selection-start-line="67" selection-start-column="68" selection-end-line="67" selection-end-column="68" />
+        <state vertical-scroll-proportion="-8.357142">
+          <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/Youxiduo/System/Model/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50799507">
+          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
           <folding />
         </state>
       </provider>
