@@ -43,7 +43,7 @@ final class AuthGroup extends Model implements IModel
 	{
 		$groups = self::db()->orderBy('group_id','asc')->lists('group_name','group_id');
 		
-		return array('0'=>'无') + $groups;
+		return $groups;
 	}
 	
 	public static function saveInfo($data)
