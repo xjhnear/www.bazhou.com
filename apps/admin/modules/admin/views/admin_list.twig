@@ -60,10 +60,12 @@
 						<td>
 							<a href="<!--{{url('admin/admin/edit',{'admin_id':item.id})}}-->" class="btn btn-primary">编辑</a>
 							<a href="<!--{{url('admin/admin/permission',{'admin_id':item.id})}}-->" class="btn btn-primary">编辑权限</a>
+							<!--{%if item.id != 1%}-->
 							<!--{%if item.isopen == 1%}-->
 							<a href="<!--{{url('admin/admin/change-status',{'admin_id':item.id,'status':'2'})}}-->" class="btn btn-primary">设为禁用</a>
 							<!--{%else%}-->
 							<a href="<!--{{url('admin/admin/change-status',{'admin_id':item.id,'status':'1'})}}-->" class="btn btn-primary">设为启用</a>
+							<!--{%endif%}-->
 							<!--{%endif%}-->
 							<!--{%if item.isopen == 2 and item.id != 1%}-->
 							<a href="<!--{{url('admin/admin/del',{'admin_id':item.id})}}-->" class="btn btn-danger">删除</a>
