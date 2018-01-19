@@ -86,7 +86,7 @@
                         success : function (data){
                             if(data.state){
                                 alertify.success(data.msg);
-                                setTimeout(function(){location.reload();},1000);
+                                setTimeout(function(){location.href = "/user/user/list";},1000);
                             }else{
                                 alertify.error(data.msg);
                             }
@@ -108,7 +108,7 @@
                         success : function (data){
                             if(data.state){
                                 alertify.success(data.msg);
-                                setTimeout(function(){location.reload();},1000);
+                                setTimeout(function(){location.href = "/user/user/list";},1000);
                             }else{
                                 alertify.error(data.msg);
                             }

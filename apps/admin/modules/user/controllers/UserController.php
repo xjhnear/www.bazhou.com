@@ -68,6 +68,15 @@ class UserController extends BackendController
 		return json_encode(array('state'=>1,'msg'=>'用户删除成功'));
 	}
 
+	public function postAjaxReset()
+	{
+		$urid = Input::get('urid');
+		if($urid){
+			User::modifyUserInfo($urid,array('identify'=>0));
+		}
+		return json_encode(array('state'=>1,'msg'=>'用户重新年审成功'));
+	}
+
     public function getVideo($urid)
     {
         $data = array();

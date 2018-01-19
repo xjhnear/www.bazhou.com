@@ -54,6 +54,7 @@
 						<td><!--{{item.updated_at|date('Y-m-d H:i:s')}}--></td>
 						<td>
 							<a href="<!--{{url('user/user/video',{'admin_id':item.urid})}}-->" class="btn btn-primary">视频审核</a>
+							<!--{%if item.identify==1 %}--><a class="btn btn-danger ajax-reset" urid="<!--{{item.urid}}-->" href="javascript:void(0);">重新年审</a><!--{%endif%}-->
 							<a href="<!--{{url('user/user/edit',{'admin_id':item.urid})}}-->" class="btn btn-primary">编辑</a>
 							<a class="btn btn-danger ajax-del" urid="<!--{{item.urid}}-->" href="javascript:void(0);">删除</a>
 						</td>
@@ -106,7 +107,28 @@
 				}
 			});
 		});
-
+		$(".ajax-reset").bind('click',function(){
+			var obj = $(this);
+			alertify.confirm('确认对该用户重新年审？',function(e){
+				if(e){
+					var urid = obj.attr('urid');
+					$.ajax({
+						url:'/user/user/ajax-reset',
+						type : 'post',
+						data:{urid: urid},
+						dataType : 'JSON',
+						success : function (data){
+							if(data.state){
+								alertify.success(data.msg);
+								setTimeout(function(){location.reload();},1000);
+							}else{
+								alertify.error(data.msg);
+							}
+						}
+					})
+				}
+			});
+		});
 		$('input[name="all"]').on('ifChecked',function(event){
 			$('input[name="ids"]').iCheck('check');
 		});
